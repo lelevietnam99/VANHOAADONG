@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Văn Hóa Á Đông 18 - Nhập Gia Tùy Tục</title>
+    <style>
+        /* Thiết lập nền vũ trụ (Dải ngân hà êm đềm, biểu tượng của sự dung hòa, hòa nhập) */
+        body, html {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh vũ trụ tĩnh lặng, hài hòa từ Unsplash */
+            background-image: url('https://images.unsplash.com/photo-1538370965046-79c0d6907d47?q=80&w=2500&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Khung chứa nội dung mờ ảo */
+        .container {
+            background-color: rgba(20, 25, 35, 0.85); /* Nền tối ánh lam xám */
+            backdrop-filter: blur(12px); /* Hiệu ứng kính mờ */
+            max-width: 850px;
+            padding: 45px 55px;
+            margin: 40px 20px;
+            border-radius: 18px;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            line-height: 1.8;
+            font-size: 1.15rem;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 10px rgba(255, 255, 255, 0.3);
+        }
+
+        h2 {
+            text-align: center;
+            color: #81d4fa; /* Xanh lam nhạt: Hòa bình, thích nghi */
+            font-size: 1.6rem;
+            margin-top: 0;
+            margin-bottom: 35px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Highlight từ khóa */
+        .hl-harmony {
+            color: #81d4fa; /* Xanh nhạt: Hòa nhập, tôn trọng */
+            font-weight: bold;
+        }
+
+        .hl-altruism {
+            color: #ffd54f; /* Vàng sáng: Vị tha, vì người */
+            font-weight: bold;
+        }
+
+        /* Khung trích dẫn kinh điển */
+        .classic-quote {
+            background: linear-gradient(to right, rgba(129, 212, 250, 0.1), rgba(255, 255, 255, 0.02));
+            padding: 20px 25px;
+            border-left: 4px solid #81d4fa;
+            border-radius: 0 8px 8px 0;
+            margin: 25px 0;
+            text-align: center;
+        }
+
+        /* Font chữ Hán */
+        .han-tu {
+            font-family: "KaiTi", "STKaiti", "BiauKai", serif;
+            font-size: 1.8rem;
+            color: #ffd54f; /* Màu vàng kim */
+            margin-bottom: 12px;
+            display: block;
+            letter-spacing: 2px;
+        }
+
+        /* Âm Hán Việt */
+        .han-viet {
+            font-style: italic;
+            color: #b3e5fc; 
+            margin-bottom: 12px;
+            display: block;
+            font-size: 1.15rem;
+        }
+
+        /* Lời dịch */
+        .dich-nghia {
+            font-weight: bold;
+            color: #ffffff;
+            font-size: 1.1rem;
+        }
+
+        /* Trích dẫn Việt Nam */
+        .vn-proverb {
+            background-color: rgba(255, 213, 79, 0.08);
+            padding: 15px 20px;
+            border: 1px dashed rgba(255, 213, 79, 0.5);
+            border-radius: 8px;
+            color: #ffe082;
+            font-weight: bold;
+            font-style: italic;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .conclusion {
+            text-align: center;
+            font-size: 1.25rem;
+            color: #b3e5fc; 
+            font-weight: bold;
+            margin-top: 35px;
+            padding: 20px;
+            border-top: 1px dashed rgba(129, 212, 250, 0.4);
+            border-bottom: 1px dashed rgba(129, 212, 250, 0.4);
+        }
+
+        /* Hiệu ứng thanh cuộn */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.6); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(129, 212, 250, 0.5); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(129, 212, 250, 0.8); 
+        }
+
+        /* Responsive cho thiết bị di động */
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+                font-size: 1.05rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+            .han-tu {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>VĂN HÓA Á ĐÔNG 18</h1>
+        <h2>Nhập Gia Tùy Tục</h2>
+        
+        <p>Câu tục ngữ này của Việt Nam cải biên từ câu:</p>
+        
+        <div class="classic-quote">
+            <span class="han-tu">入鄉隨俗</span>
+            <span class="han-viet">"Nhập hương tùy tục"</span>
+            <span class="dich-nghia">(Vào làng nào phải hòa theo phong tục của làng đó)</span>
+            <span style="display: block; font-size: 0.95rem; color: #90caf9; margin-top: 15px; font-style: italic;">
+                Xuất hiện từ rất sớm trong văn học Trung Quốc, chẳng hạn như trong sách Nam Tề Thư (南齊書) và nhiều tác phẩm văn học đời Đường – Tống.
+            </span>
+        </div>
+        
+        <p>Lời dạy này nhắc nhở mọi người biết <span class="hl-harmony">sống thuận</span> với tâm tình của người chung quanh để không tạo nên xung đột mất vui. Mỗi địa phương, mỗi gia đình đều có tập quán, nề nếp, văn hóa đặc trưng, ta nên tôn trọng các phong hóa đó để tránh xung đột, bất hòa không cần thiết.</p>
+        
+        <p>Việt Nam có câu:</p>
+        
+        <div class="vn-proverb">
+            "Ăn trông nồi, ngồi trông hướng"
+        </div>
+        
+        <p>Cũng răn dạy con người biết sống hợp lý với hoàn cảnh để không mích lòng mọi người chung quanh. Ăn có ngon miệng cũng phải cân nhắc số người đang ăn với lượng thức ăn hiện hữu, nếu cần ta nhịn ăn giảm chút cũng không chết chóc gì. Muốn đi, muốn đứng, muốn ngồi cũng xem vị trí của ta, khung cảnh chung quanh, sao cho hợp lý nhất để không phiền lòng ai.</p>
+        
+        <p>Ta nhận thấy văn hóa truyền thống Á ĐÔNG coi trọng lối sống <span class="hl-altruism">vị tha</span>, sống vì người, sống cho người, chứ không sống cho mình. Nghe có vẻ gò bó cực khổ, nhưng lối sống đó giúp tạo nên một cộng đồng ổn định hài hòa an vui, và yên tâm. Rồi lối sống vị tha đó sẽ đem lại trái ngọt cho mỗi người trong cộng đồng đó, không ai bị cô đơn, không ai bị bỏ rơi, mọi người có trách nhiệm lẫn nhau cho đến khi già yếu bệnh chết.</p>
+        
+        <p>Dĩ nhiên ta cũng để ngõ cho những đột phá xuất sắc để nâng xã hội lên cao hơn, nhưng dù có đột phá gì cũng không được trái với đạo đức <span class="hl-altruism">vị tha</span> căn bản.</p>
+        
+        <p class="conclusion">
+            Ta hay hiểu vị tha là giúp đỡ việc gì cụ thể, cho một người cụ thể, nhưng ở đây, đạo đức vị tha đi vào trong cư xử tinh tế để không làm tổn thương tình cảm của cộng đồng.
+        </p>
+    </div>
+
+</body>
+</html>

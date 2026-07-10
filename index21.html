@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Văn Hóa Á Đông 21 - Cô Độc</title>
+    <style>
+        /* Thiết lập nền vũ trụ (Bầu trời đêm tĩnh lặng, sâu thẳm thể hiện sự cô độc) */
+        body, html {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh vũ trụ tĩnh lặng từ Unsplash */
+            background-image: url('https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?q=80&w=2500&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Khung chứa nội dung mờ ảo */
+        .container {
+            background-color: rgba(15, 18, 25, 0.85); /* Nền tối ánh lam xám */
+            backdrop-filter: blur(12px); /* Hiệu ứng kính mờ */
+            max-width: 850px;
+            padding: 45px 55px;
+            margin: 40px 20px;
+            border-radius: 18px;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            line-height: 1.8;
+            font-size: 1.15rem;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 10px rgba(255, 255, 255, 0.3);
+        }
+
+        h2 {
+            text-align: center;
+            color: #b0bec5; /* Xám bạc thanh tao, trầm mặc */
+            font-size: 1.6rem;
+            margin-top: 0;
+            margin-bottom: 35px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Highlight từ khóa */
+        .hl-lonely {
+            color: #90caf9; /* Xanh lơ nhạt: Cô đơn, cô độc */
+            font-weight: bold;
+        }
+
+        .hl-strength {
+            color: #ffd54f; /* Vàng sáng: Bản lĩnh, quân tử */
+            font-weight: bold;
+        }
+
+        /* Khung trích dẫn kinh điển */
+        .classic-quote {
+            background: linear-gradient(to right, rgba(144, 202, 249, 0.1), rgba(255, 255, 255, 0.02));
+            padding: 25px;
+            border-left: 4px solid #90caf9;
+            border-radius: 0 8px 8px 0;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        /* Font chữ Hán */
+        .han-tu {
+            font-family: "KaiTi", "STKaiti", "BiauKai", serif;
+            font-size: 1.8rem;
+            color: #ffd54f; /* Màu vàng kim */
+            margin-bottom: 12px;
+            display: block;
+            letter-spacing: 2px;
+        }
+
+        /* Âm Hán Việt */
+        .han-viet {
+            font-style: italic;
+            color: #b0bec5; 
+            margin-bottom: 15px;
+            display: block;
+            font-size: 1.1rem;
+        }
+
+        /* Lời dịch */
+        .dich-nghia {
+            font-weight: bold;
+            color: #ffffff;
+            font-size: 1.15rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .quote-source {
+            display: block;
+            font-size: 0.95rem;
+            color: #78909c;
+            margin-top: 5px;
+            font-style: italic;
+        }
+
+        .quote-explanation {
+            display: block;
+            font-size: 1.05rem;
+            color: #e0e0e0;
+            margin-top: 15px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 15px;
+            text-align: justify;
+        }
+
+        /* Khung 2 bản lĩnh */
+        .skill-block {
+            background-color: rgba(255, 255, 255, 0.03);
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 3px solid #ffd54f;
+            margin-bottom: 20px;
+        }
+        
+        .conclusion {
+            text-align: center;
+            font-size: 1.25rem;
+            color: #b0bec5; 
+            font-weight: bold;
+            margin-top: 35px;
+            padding: 20px;
+            border-top: 1px dashed rgba(176, 190, 197, 0.4);
+            border-bottom: 1px dashed rgba(176, 190, 197, 0.4);
+        }
+
+        /* Hiệu ứng thanh cuộn */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.6); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(144, 202, 249, 0.5); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(144, 202, 249, 0.8); 
+        }
+
+        /* Responsive cho thiết bị di động */
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+                font-size: 1.05rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+            .han-tu {
+                font-size: 1.5rem;
+            }
+            .classic-quote {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>VĂN HÓA Á ĐÔNG 21</h1>
+        <h2>Cô Độc</h2>
+        
+        <p><span class="hl-lonely">Cô đơn</span> nghĩa là không ai thông cảm cho mình, không ai hiểu mình. Dù cho mình lầm lỗi, nhưng lỗi đó vẫn có lý do, và ta cần ai đó thông cảm hiểu giùm cái lý do đó để không khinh ghét ta.</p>
+        
+        <p>Hoặc khi ta thành công bị đố kỵ, ta cần ai đó ủng hộ ta giúp ta vững lòng.</p>
+        
+        <p>Hoặc khi ta có quan điểm đột phá, ta cần ai đó hiểu để ủng hộ ta vì cái gì mới sẽ bị nghi kỵ.</p>
+        
+        <p>Người đồng cảm ta, coi vậy trên đời không có nhiều.</p>
+        
+        <p>Còn <span class="hl-lonely">Cô độc</span> có ý nghĩa vật chất, là không có ai để tương tác hỗ trợ trong cuộc sống. Để có thể gắn bó với nhau lâu dài, hỗ trợ nhau trong cuộc sống, đi với nhau qua vui buồn sướng khổ, tính ra không có mấy người.</p>
+        
+        <p>Ta hay dựa vào tình gia đình có liên quan huyết thống để hy vọng có người tương tác hỗ trợ với ta trong đời, nhưng thực tế là tình gia đình cũng không bảo đảm. Rồi tình trạng gia đình ít con cái càng tạo nên sự cô độc nhiều hơn. Còn bà con thân quyến thì chỉ cần cách một lớp là tình nghĩa lạt lẽo liền.</p>
+        
+        <p>Tính ra, nhìn thế giới 8 tỷ người chứ đa phần là cô độc, ít có ai sống chết vì ai, ít có ai trọn tình với ai, ít có ai chung thủy với ai, ít có ai dám hy sinh vì ai.</p>
+        
+        <p><span class="hl-lonely">Cô đơn</span> làm ta buồn tủi, <span class="hl-lonely">Cô độc</span> làm ta khốn khó. Ta có hai <span class="hl-strength">bản lĩnh</span> cần được trau dồi đối với vấn đề cô quạnh này như sau:</p>
+        
+        <div class="skill-block">
+            <strong>Một là chịu đựng được cô độc cô đơn.</strong>
+        </div>
+
+        <div class="classic-quote">
+            <span class="han-tu">君子固窮，小人窮斯濫矣。</span>
+            <span class="han-viet">"Quân tử cố cùng, tiểu nhân cùng tư lạm hỹ."</span>
+            <span class="quote-source">Nguồn: 《論語‧衛靈公》 (Luận Ngữ – Vệ Linh Công)</span>
+            <span class="dich-nghia">Người quân tử, dù rơi vào cảnh nghèo túng, vẫn giữ vững đạo lý; kẻ tiểu nhân, khi nghèo thì sinh ra đê tiện, buông thả.</span>
+            <span class="quote-explanation">Dù cô độc, nghèo khổ hay bị ruồng bỏ, <span class="hl-strength">quân tử</span> không đánh mất phẩm giá. Cô đơn là thử thách để rèn nhân cách.</span>
+        </div>
+        
+        <div class="skill-block">
+            <strong>Hai là, suốt đời kêu gọi tình yêu thương, lòng tử tế, sự chung thủy để ngăn chặn sự cô độc giữa loài người.</strong>
+        </div>
+        
+        <p>Ai gieo rắc tình đoàn kết giữa mọi người sẽ được phước ở đâu cũng đông vầy quyến thuộc chung quanh.</p>
+        
+        <p class="conclusion">
+            Còn ai hay ly gián, nói xấu, nói cho người này ghét người kia, sau này sẽ bị quả báo cô độc.
+        </p>
+    </div>
+
+</body>
+</html>

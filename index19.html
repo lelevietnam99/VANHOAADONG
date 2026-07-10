@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Văn Hóa Á Đông 19 - Kính Lão Đắc Thọ</title>
+    <style>
+        /* Thiết lập nền vũ trụ (Dải thiên hà mang sắc vàng/cam ấm áp, biểu tượng của thời gian và sự trường thọ) */
+        body, html {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh vũ trụ tuyệt đẹp từ Unsplash */
+            background-image: url('https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=2500&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Khung chứa nội dung mờ ảo */
+        .container {
+            background-color: rgba(20, 15, 10, 0.85); /* Nền tối ánh nâu/vàng rất nhẹ */
+            backdrop-filter: blur(12px); /* Hiệu ứng kính mờ */
+            max-width: 850px;
+            padding: 45px 55px;
+            margin: 40px 20px;
+            border-radius: 18px;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            line-height: 1.8;
+            font-size: 1.15rem;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 10px rgba(255, 255, 255, 0.3);
+        }
+
+        h2 {
+            text-align: center;
+            color: #ffb74d; /* Màu vàng cam ấm áp, tôn kính */
+            font-size: 1.6rem;
+            margin-top: 0;
+            margin-bottom: 35px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Highlight từ khóa */
+        .hl-youth {
+            color: #81c784; /* Xanh lá: Sự sống mới, người trẻ */
+            font-weight: bold;
+        }
+
+        .hl-elderly {
+            color: #ffb74d; /* Vàng cam: Sự trưởng thành, người già, thọ */
+            font-weight: bold;
+        }
+
+        /* Khung chứa Tục ngữ */
+        .proverb-block {
+            background: linear-gradient(to right, rgba(255, 183, 77, 0.1), rgba(255, 255, 255, 0.02));
+            padding: 25px 30px;
+            border-left: 4px solid #ffb74d;
+            border-radius: 0 8px 8px 0;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .proverb-text {
+            font-size: 1.4rem;
+            color: #ffe0b2;
+            font-weight: bold;
+            font-style: italic;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+
+        .proverb-meaning {
+            display: block;
+            font-size: 1.05rem;
+            color: #b0bec5;
+            margin-top: 5px;
+        }
+        
+        .conclusion {
+            text-align: center;
+            font-size: 1.25rem;
+            color: #ffb74d; 
+            font-weight: bold;
+            margin-top: 35px;
+            padding: 20px;
+            border-top: 1px dashed rgba(255, 183, 77, 0.4);
+            border-bottom: 1px dashed rgba(255, 183, 77, 0.4);
+        }
+
+        /* Hiệu ứng thanh cuộn */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.6); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 183, 77, 0.5); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 183, 77, 0.8); 
+        }
+
+        /* Responsive cho thiết bị di động */
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+                font-size: 1.05rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+            .proverb-text {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>VĂN HÓA Á ĐÔNG 19</h1>
+        <h2>Kính Lão Đắc Thọ</h2>
+        
+        <p>Tục ngữ Việt Nam có câu:</p>
+        
+        <div class="proverb-block">
+            <div class="proverb-text">"Yêu trẻ, trẻ đến nhà<br>Kính già, già để tuổi cho"</div>
+            <span class="proverb-meaning">(Yêu trẻ sẽ sinh được nhiều con - Kính già sẽ sống thọ)</span>
+        </div>
+        
+        <p>Nếu ta <span class="hl-youth">yêu mến trẻ em</span> thì nhân quả là ta dễ có đông con cháu.</p>
+        
+        <p>Nếu ta <span class="hl-elderly">tôn trọng người lớn tuổi</span> thì ta dễ sống thọ.</p>
+        
+        <p>Hai ý này là sự đúc kết kinh nghiệm quan sát thực tiễn cuộc sống qua nhiều thế hệ mà có được. Đây cũng là lời khuyên cho mọi người để có cách sống tử tế, hãy yêu quý trẻ, những người nhỏ tuổi hơn mình, sẽ khiến đời mình không bị cô độc, lúc nào cũng có quyến thuộc đông vui; hãy tôn trọng già, những người lớn tuổi hơn mình, tự nhiên mình sống lâu khỏe mạnh. Còn nhiều ý tứ phía sau hai câu ngắn ngủi đó. <span class="hl-youth">Yêu trẻ</span> tức là phải chăm sóc cho trẻ, <span class="hl-elderly">Kính già</span> tức là phải chăm sóc cho người già. Sau hai chữ yêu và kính đó là biết bao nhiêu công việc phải làm.</p>
+        
+        <p>Còn một điều thú vị nữa đó là, dùng tiêu chuẩn tuổi tác để gửi đến lòng kính trọng chứ không phải dựa vào các tiêu chuẩn khác như kiến thức, trình độ, tài năng, tài sản, địa vị, dung mạo, dòng dõi... Cứ lớn tuổi là đáng được kính trọng.</p>
+        
+        <p>Nhiều người sẽ cãi rằng thực tế có nhiều người lớn tuổi nhưng vẫn sai lầm, lớn tuổi vẫn chưa thành công gì, có gì để tôn trọng.</p>
+        
+        <p class="conclusion">
+            Ta không cãi, nhưng cuộc đời sẽ trả lời. Ta cứ khiêm tốn bày tỏ sự tôn trọng chân thành đến người lớn tuổi, rồi sẽ thấy người xưa sâu sắc như thế nào.
+        </p>
+    </div>
+
+</body>
+</html>

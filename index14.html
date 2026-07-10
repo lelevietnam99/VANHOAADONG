@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Văn Hóa Á Đông 14 - Tiên Học Lễ Hậu Học Văn</title>
+    <style>
+        /* Thiết lập nền vũ trụ (Dải tinh vân xanh ngọc sâu thẳm, tượng trưng cho đạo đức và trí tuệ) */
+        body, html {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh vũ trụ tuyệt đẹp từ Unsplash */
+            background-image: url('https://images.unsplash.com/photo-1501862700950-18382cd41497?q=80&w=2500&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Khung chứa nội dung mờ ảo */
+        .container {
+            background-color: rgba(15, 25, 40, 0.85); /* Nền tối ánh lam ngọc */
+            backdrop-filter: blur(12px); /* Hiệu ứng kính mờ */
+            max-width: 850px;
+            padding: 45px 55px;
+            margin: 40px 20px;
+            border-radius: 18px;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.8;
+            font-size: 1.15rem;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 10px rgba(255, 255, 255, 0.4);
+        }
+
+        h2 {
+            text-align: center;
+            color: #81c784; /* Xanh lá nhạt tượng trưng cho Đạo đức, Lễ nghĩa */
+            font-size: 1.6rem;
+            margin-top: 0;
+            margin-bottom: 35px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Highlight từ khóa */
+        .hl-ethics {
+            color: #81c784; /* Xanh lá: Lễ nghĩa, Đạo đức */
+            font-weight: bold;
+        }
+
+        .hl-talent {
+            color: #64b5f6; /* Xanh dương: Văn chương, Kiến thức, Tài năng */
+            font-weight: bold;
+        }
+
+        /* Khung trích dẫn kinh điển */
+        .classic-quote {
+            background: linear-gradient(to right, rgba(129, 199, 132, 0.1), rgba(255, 255, 255, 0.02));
+            padding: 20px 25px;
+            border-left: 4px solid #81c784;
+            border-radius: 0 8px 8px 0;
+            margin: 25px 0;
+            text-align: center;
+        }
+
+        .source-info {
+            color: #b0bec5;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            font-style: italic;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 10px;
+        }
+
+        /* Font chữ Hán */
+        .han-tu {
+            font-family: "KaiTi", "STKaiti", "BiauKai", serif;
+            font-size: 2rem;
+            color: #ffd54f; /* Màu vàng kim */
+            margin-bottom: 12px;
+            display: block;
+            letter-spacing: 5px;
+        }
+
+        /* Âm Hán Việt */
+        .han-viet {
+            font-style: italic;
+            color: #aed581; 
+            margin-bottom: 12px;
+            display: block;
+            font-size: 1.2rem;
+        }
+
+        /* Lời dịch */
+        .dich-nghia {
+            font-weight: bold;
+            color: #ffffff;
+            font-size: 1.15rem;
+        }
+
+        /* Khung nhấn mạnh (Con dao hai lưỡi) */
+        .warning-block {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 20px 25px;
+            border-radius: 8px;
+            border: 1px dashed rgba(100, 181, 246, 0.5);
+            margin: 25px 0;
+            color: #e3f2fd;
+            font-style: italic;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        .warning-block strong {
+            color: #64b5f6;
+        }
+        
+        .conclusion {
+            text-align: center;
+            font-size: 1.3rem;
+            color: #81c784; 
+            font-weight: bold;
+            margin-top: 35px;
+            padding: 20px;
+            border-top: 1px dashed rgba(129, 199, 132, 0.4);
+            border-bottom: 1px dashed rgba(129, 199, 132, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Hiệu ứng thanh cuộn */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.6); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(129, 199, 132, 0.5); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(129, 199, 132, 0.8); 
+        }
+
+        /* Responsive cho thiết bị di động */
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+                font-size: 1.05rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+            .han-tu {
+                font-size: 1.6rem;
+            }
+            .warning-block {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>VĂN HÓA Á ĐÔNG 14</h1>
+        <h2>Tiên Học Lễ Hậu Học Văn</h2>
+        
+        <p>Câu nói trên không chính thức có từ một cuốn kinh nào trong Nho giáo nhưng phản ánh đúng tinh thần của Nho giáo. Trong thiên "Học ký" (學記) của Lễ Ký có câu tương tự thể hiện rõ quan điểm:</p>
+        
+        <div class="classic-quote">
+            <span class="han-tu">禮先乎文</span>
+            <span class="han-viet">Lễ tiên hồ văn</span>
+            <span class="dich-nghia">Nghĩa là: Lễ phải học trước văn.</span>
+        </div>
+        
+        <p>Dịch sát nghĩa là: Trước học <span class="hl-ethics">lễ nghĩa</span>, sau học <span class="hl-talent">văn chương</span>.</p>
+        
+        <p>Nếu dịch rộng ý hơn là: Trước tiên phải học <span class="hl-ethics">lễ nghĩa đạo đức</span>, sau sẽ học <span class="hl-talent">kiến thức tài năng</span>.</p>
+        
+        <p><span class="hl-talent">Kiến thức tài năng</span> là cái dùng để làm nên sự nghiệp danh lợi. <span class="hl-ethics">Đạo đức lễ nghĩa</span> là cái dùng để làm nên ý nghĩa cao đẹp của cuộc sống.</p>
+        
+        <p>Nho giáo xem trọng đạo đức lễ nghĩa tư cách phẩm hạnh, rồi lấy đó làm nền tảng để tiến lên rèn luyện tài năng học thuật để giúp đời. Nếu không có nền tảng đạo đức, kiến thức tài năng sẽ trở thành vũ khí tàn phá cuộc đời.</p>
+        
+        <div class="warning-block">
+            <strong>Kiến thức tài năng là con dao hai lưỡi</strong>, có thể giúp đời, có thể hại đời.
+        </div>
+        
+        <p>Yếu tố quyết định để kiến thức tài năng trở thành công cụ giúp đời hay hại đời chính là <span class="hl-ethics">lễ nghĩa đạo đức</span>. Nếu có lễ nghĩa đạo đức, con người với tài năng kiến thức của mình sẽ trở thành công cụ xây dựng xã hội bình yên thịnh vượng hạnh phúc.</p>
+        
+        <p>Nho giáo dùng Lễ nghĩa để đại diện cho cả hệ thống đạo đức hàm ý là cái hình thức lễ nghĩa bên ngoài cũng là biểu hiện cho đạo đức bên trong. Người có lễ nghĩa chưa chắc có đạo đức, nhưng người có đạo đức thì chắc chắn sẽ có lễ nghĩa. Ta cứ bám theo hình thức lễ nghĩa để suy tìm bước tiếp theo là lễ nghĩa đó có phải xuất phát từ đạo đức bên trong hay không.</p>
+        
+        <p>Đạo đức là thuộc về tâm ý bên trong, vô hình khó đoán. Lễ nghĩa thuộc về lời nói cử chỉ bên ngoài dễ thấy. Cái khó đoán bên trong tính sau, cái dễ thấy bên ngoài phải hoàn thiện cái đã. Đó là lý do ta phải học lễ nghĩa trước rồi từ cái lễ nghĩa này tiến sâu vào hoàn thiện đạo đức bên trong.</p>
+        
+        <p>Lễ nghĩa hàm ý lời nói và cử chỉ phải thể hiện được sự tôn trọng thương yêu đối với mọi người. Rồi cái hình thức đó từ từ sẽ biến thành bản chất bên trong, ta sẽ thật lòng yêu thương tôn trọng mọi người.</p>
+        
+        <p class="conclusion">
+            Mãi mãi ta phải giữ gìn phương châm:<br>Tiên học lễ, Hậu học văn.
+        </p>
+    </div>
+
+</body>
+</html>

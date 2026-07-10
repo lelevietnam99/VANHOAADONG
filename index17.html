@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Văn Hóa Á Đông 17 - Tôn Sư Trọng Đạo</title>
+    <style>
+        /* Thiết lập nền vũ trụ (Bầu trời sao soi bóng mặt nước, biểu tượng cho sự trong sáng, sâu sắc của đạo học) */
+        body, html {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh vũ trụ tuyệt đẹp từ Unsplash */
+            background-image: url('https://images.unsplash.com/photo-1516339901601-2e1b62dc0c45?q=80&w=2500&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Khung chứa nội dung mờ ảo */
+        .container {
+            background-color: rgba(15, 22, 35, 0.85); /* Nền tối ánh xanh đêm sâu thẳm */
+            backdrop-filter: blur(12px); /* Hiệu ứng kính mờ */
+            max-width: 850px;
+            padding: 45px 55px;
+            margin: 40px 20px;
+            border-radius: 18px;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.8;
+            font-size: 1.15rem;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 10px rgba(255, 255, 255, 0.4);
+        }
+
+        h2 {
+            text-align: center;
+            color: #ffd54f; /* Màu vàng của sự thông thái, tôn kính */
+            font-size: 1.6rem;
+            margin-top: 0;
+            margin-bottom: 35px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Highlight từ khóa */
+        .hl-respect {
+            color: #ffd54f; /* Vàng sáng: Tôn sư, kính trọng */
+            font-weight: bold;
+        }
+
+        .hl-future {
+            color: #81d4fa; /* Xanh lơ nhạt: Tương lai, hi vọng */
+            font-weight: bold;
+        }
+
+        /* Khung Ca dao / Tục ngữ */
+        .poetry-block {
+            background: linear-gradient(to right, rgba(255, 213, 79, 0.1), rgba(255, 255, 255, 0.02));
+            padding: 20px 25px;
+            border-left: 4px solid #ffd54f;
+            border-radius: 0 8px 8px 0;
+            margin: 25px 0;
+            text-align: center;
+        }
+
+        .poetry-text {
+            font-size: 1.4rem;
+            color: #ffe082;
+            font-weight: bold;
+            font-style: italic;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .poetry-explanation {
+            display: block;
+            font-size: 1.05rem;
+            color: #b0bec5;
+            text-align: justify;
+        }
+
+        /* Khung trích dẫn nhỏ */
+        .quote-small {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px 20px;
+            border-radius: 8px;
+            border: 1px dashed rgba(255, 213, 79, 0.4);
+            margin: 20px 0;
+            color: #e0e0e0;
+        }
+
+        .quote-small strong {
+            color: #ffd54f;
+        }
+        
+        /* Trích dẫn âm nhạc / Thơ ca */
+        .lyric-block {
+            text-align: center;
+            font-size: 1.25rem;
+            color: #81d4fa;
+            font-style: italic;
+            margin: 30px 0;
+            padding: 15px;
+        }
+
+        .conclusion {
+            text-align: center;
+            font-size: 1.25rem;
+            color: #ffd54f; 
+            font-weight: bold;
+            margin-top: 35px;
+            padding: 20px;
+            border-top: 1px dashed rgba(255, 213, 79, 0.4);
+            border-bottom: 1px dashed rgba(255, 213, 79, 0.4);
+        }
+
+        /* Hiệu ứng thanh cuộn */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.6); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 213, 79, 0.5); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 213, 79, 0.8); 
+        }
+
+        /* Responsive cho thiết bị di động */
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+                font-size: 1.05rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+            .poetry-text {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>VĂN HÓA Á ĐÔNG 17</h1>
+        <h2>Tôn Sư Trọng Đạo</h2>
+        
+        <p>Ca dao Việt Nam có câu:</p>
+        
+        <div class="poetry-block">
+            <div class="poetry-text">
+                "Muốn sang thì bắc cầu kiều<br>
+                Muốn con hay chữ phải yêu lấy thầy"
+            </div>
+            <span class="poetry-explanation">
+                (Muốn gia đình nhìn có vẻ sang trọng thì làm cầu đẹp bắc qua ao trước sân làm cảnh, còn muốn con mình học giỏi thì cha mẹ phải quý trọng thầy cô giáo).
+            </span>
+        </div>
+        
+        <div class="quote-small">
+            Một câu khác: <strong>"Nhất tự vi sư, Bán tự vi sư"</strong> – dạy mình một chữ hay nửa chữ, dạy mình ít hay nhiều gì cũng đã là thầy của mình, phải kính trọng.
+        </div>
+
+        <div class="quote-small">
+            Một câu khác: <strong>"Không thầy đố mày làm nên..."</strong>
+        </div>
+        
+        <p>Văn hóa Á Đông đề cao tinh thần <span class="hl-respect">tôn sư trọng đạo</span>, ai không biết kính trọng người truyền dạy kiến thức, đạo đức, giá trị tinh thần cho mình thì người đó không có đạo đức làm người, sau này sẽ thất bại, nếu có địa vị sẽ là người ác.</p>
+        
+        <p>Mà không phải chỉ có học trò mới phải kính trọng thầy cô giáo của mình, cả phụ huynh cũng phải biết kính trọng thầy cô giáo của con mình thì con mình mới ngoan được.</p>
+        
+        <p>Nhiều cha mẹ hay chê bai thầy cô giáo cho con nghe, đâu ngờ đó là nguyên nhân khiến cho con mình sau này một đời thất bại. Cha mẹ có thắc mắc gì thì gặp riêng thầy cô giáo để trao đổi, còn trước mặt con, cha mẹ phải "đứng về phe" của thầy cô giáo. Con trẻ mà biểu lộ thái độ bất kính thầy cô giáo, nói lời gì coi thường thầy cô giáo, thì cha mẹ phải nghiêm khắc răn dạy chứ đừng bỏ qua mà hư cả cuộc đời của nó tội nghiệp.</p>
+        
+        <div class="lyric-block">
+            "Con thương thầy như thương dòng sông quê êm ái, mái chèo khua tiếng nước vọng đêm khuya..."
+        </div>
+        
+        <p>Muốn biết <span class="hl-future">tương lai của một đất nước</span>, ta hãy nhìn thái độ của học trò đối với thầy cô giáo.</p>
+
+        <p class="conclusion">
+            Nếu học trò biết kính sợ thầy cô thì đất nước đó còn có tương lai. Nếu học trò được "bình đẳng" với thầy cô giáo thì ta nên bỏ đất nước đó mà đi, hỏng hết rồi.
+        </p>
+    </div>
+
+</body>
+</html>

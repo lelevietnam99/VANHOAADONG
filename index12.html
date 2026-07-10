@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Văn Hóa Á Đông 12 - Nam Nữ Thụ Thụ Bất Thân</title>
+    <style>
+        /* Thiết lập nền vũ trụ (Dải ngân hà sâu thẳm mang sắc tím/xanh tượng trưng cho sự tĩnh lặng, chừng mực) */
+        body, html {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh vũ trụ tuyệt đẹp từ Unsplash */
+            background-image: url('https://images.unsplash.com/photo-1436891620584-47fd0e565afb?q=80&w=2500&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Khung chứa nội dung mờ ảo */
+        .container {
+            background-color: rgba(20, 15, 35, 0.85); /* Nền tối ánh tím trầm */
+            backdrop-filter: blur(12px); /* Hiệu ứng kính mờ */
+            max-width: 850px;
+            padding: 45px 55px;
+            margin: 40px 20px;
+            border-radius: 18px;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.8;
+            font-size: 1.15rem;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 10px rgba(255, 255, 255, 0.4);
+        }
+
+        h2 {
+            text-align: center;
+            color: #ce93d8; /* Tím nhạt thanh tao */
+            font-size: 1.6rem;
+            margin-top: 0;
+            margin-bottom: 35px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Highlight từ khóa */
+        .hl-etiquette {
+            color: #ce93d8; /* Tím nhạt: Lễ giáo, đoan chính */
+            font-weight: bold;
+        }
+
+        .hl-virtue {
+            color: #ffb74d; /* Vàng cam: Tiết hạnh, bảo vệ tổ ấm */
+            font-weight: bold;
+        }
+
+        /* Khung trích dẫn kinh điển */
+        .classic-quote {
+            background: linear-gradient(to right, rgba(206, 147, 216, 0.1), rgba(255, 255, 255, 0.02));
+            padding: 20px 25px;
+            border-left: 4px solid #ce93d8;
+            border-radius: 0 8px 8px 0;
+            margin: 25px 0;
+        }
+
+        .source-info {
+            color: #b0bec5;
+            font-size: 1.05rem;
+            margin-bottom: 12px;
+            font-style: italic;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 8px;
+            text-align: center;
+        }
+
+        /* Font chữ Hán */
+        .han-tu {
+            font-family: "KaiTi", "STKaiti", "BiauKai", serif;
+            font-size: 1.8rem;
+            color: #ffd54f;
+            margin-bottom: 12px;
+            display: block;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        /* Âm Hán Việt */
+        .han-viet {
+            font-style: italic;
+            color: #e1bee7; 
+            margin-bottom: 12px;
+            display: block;
+            font-size: 1.15rem;
+            text-align: center;
+        }
+
+        /* Lời dịch */
+        .dich-nghia {
+            font-weight: bold;
+            color: #ffffff;
+            font-size: 1.15rem;
+            text-align: center;
+            display: block;
+        }
+
+        /* Khung suy ngẫm / hệ quả */
+        .reflection-block {
+            background-color: rgba(255, 255, 255, 0.04);
+            padding: 20px 25px;
+            border-radius: 8px;
+            border: 1px dashed rgba(255, 183, 77, 0.4);
+            margin: 25px 0;
+            color: #ffe0b2;
+            font-style: italic;
+        }
+
+        .conclusion {
+            text-align: center;
+            font-size: 1.25rem;
+            color: #ce93d8; 
+            font-weight: bold;
+            margin-top: 35px;
+            padding: 20px;
+            border-top: 1px dashed rgba(206, 147, 216, 0.4);
+            border-bottom: 1px dashed rgba(206, 147, 216, 0.4);
+        }
+
+        /* Hiệu ứng thanh cuộn */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.6); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(206, 147, 216, 0.5); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(206, 147, 216, 0.8); 
+        }
+
+        /* Responsive cho thiết bị di động */
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+                font-size: 1.05rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+            .han-tu {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>VĂN HÓA Á ĐÔNG 12</h1>
+        <h2>Nam Nữ Thụ Thụ Bất Thân</h2>
+        
+        <p>Câu <span class="hl-etiquette">“Nam nữ thụ thụ bất thân”</span> xuất phát từ sách Lễ Ký (禮記, Kinh Lễ), một trong những kinh điển quan trọng của Nho giáo.</p>
+        
+        <div class="classic-quote">
+            <span class="han-tu">男女授受不親</span>
+            <span class="han-viet">Nam nữ thụ thụ bất thân</span>
+        </div>
+        
+        <p>Câu này phản ánh quan niệm lễ giáo xưa, nhấn mạnh rằng nam và nữ dù có đưa cái gì cũng không nên đưa trực tiếp với nhau, để món đồ trên bàn và nói vài lời để người kia tự đến bàn mà cầm lấy. Điều này có hàm ý rằng nam và nữ phải khéo giữ khoảng cách nhằm giữ gìn sự đoan chính và tránh những hành vi thân mật không phù hợp, tránh lửa gần rơm, tránh lời dị nghị.</p>
+        
+        <p>Ngoài ra, trong tác phẩm Mạnh Tử (孟子), cụ thể là phần “Ly Lâu thượng” (離婁上), có ghi lại một cuộc đối thoại giữa Mạnh Tử và Thuần Vu Khôn về nguyên tắc này. Khi được hỏi về việc cứu người (chị dâu chẳng hạn) bị rơi xuống nước, Mạnh Tử trả lời rằng:</p>
+        
+        <div class="classic-quote">
+            <span class="han-viet">“Nam nữ thụ thụ bất thân, lễ dã; tẩu nịch, viện chi dĩ thủ giả, quyền dã.”</span>
+            <span class="dich-nghia">Nghĩa là biết giữ khoảng cách nam nữ là lễ giáo, còn việc cứu người (tế nhị như trường hợp chị dâu) là nhân từ quyền biến.</span>
+        </div>
+        
+        <p>Thời xưa lễ giáo nghiêm khắc nên bảo vệ được tiết hạnh cho phụ nữ và tránh tội lỗi cho người nam. Văn hóa lối sống tây phương thiếu mất lễ giáo này nên nam nữ chung đụng dễ dãi dẫn nhiều hệ lụy.</p>
+        
+        <div class="reflection-block">
+            <span class="hl-virtue">Tiết hạnh</span> người phụ nữ dù vô hình được cho là vô giá vì có công năng bảo vệ gia đình ổn định bền vững, người chồng tin tưởng và nể trọng người vợ, đó là một giềng mối bảo vệ tổ ấm gia đình.
+        </div>
+        
+        <p>Bản năng xác thịt thì giống loài nào cũng có sẵn, nhưng chỉ có loài người với lý trí, đạo đức, thông minh mới kiểm soát bản năng để tránh nhiều điều đáng tiếc, sau này đỡ hối hận. Có nhiều việc lỡ phạm rồi hối hận dày vò than trách cũng không kéo lại được, chi bằng giữ kỹ từ buổi đầu hay hơn.</p>
+        
+        <p class="conclusion">
+            Giữa ảnh hưởng của tây phương đang tràn vào tàn phá xã hội, ta nên nêu cao đạo đức Á ĐÔNG để bảo vệ cho các thế hệ con cháu mình về sau.
+        </p>
+    </div>
+
+</body>
+</html>

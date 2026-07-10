@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Văn Hóa Á Đông 20 - Cầu Trời Khấn Phật</title>
+    <style>
+        /* Thiết lập nền vũ trụ (Bầu trời sao tĩnh lặng, mang màu sắc tâm linh huyền bí) */
+        body, html {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh vũ trụ tuyệt đẹp từ Unsplash */
+            background-image: url('https://images.unsplash.com/photo-1502134249126-9f3755a50d78?q=80&w=2500&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Khung chứa nội dung mờ ảo */
+        .container {
+            background-color: rgba(15, 20, 30, 0.85); /* Nền tối ánh lam trầm */
+            backdrop-filter: blur(12px); /* Hiệu ứng kính mờ */
+            max-width: 850px;
+            padding: 45px 55px;
+            margin: 40px 20px;
+            border-radius: 18px;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.8;
+            font-size: 1.15rem;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 10px rgba(255, 255, 255, 0.4);
+        }
+
+        h2 {
+            text-align: center;
+            color: #ffd54f; /* Vàng sáng mang tính tâm linh, tôn kính */
+            font-size: 1.6rem;
+            margin-top: 0;
+            margin-bottom: 35px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Highlight từ khóa */
+        .hl-divine {
+            color: #ffd54f; /* Vàng: Thần Thánh, Trời Phật */
+            font-weight: bold;
+        }
+
+        .hl-superstition {
+            color: #ff8a65; /* Cam đỏ: Mê tín, kiêu ngạo */
+            font-weight: bold;
+        }
+
+        /* Khung trích dẫn kinh điển */
+        .classic-quote {
+            background: linear-gradient(to right, rgba(255, 213, 79, 0.1), rgba(255, 255, 255, 0.02));
+            padding: 20px 25px;
+            border-left: 4px solid #ffd54f;
+            border-radius: 0 8px 8px 0;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        /* Font chữ Hán */
+        .han-tu {
+            font-family: "KaiTi", "STKaiti", "BiauKai", serif;
+            font-size: 1.8rem;
+            color: #ffe082;
+            margin-bottom: 12px;
+            display: block;
+            letter-spacing: 2px;
+        }
+
+        /* Âm Hán Việt */
+        .han-viet {
+            font-style: italic;
+            color: #81d4fa; 
+            margin-bottom: 10px;
+            display: block;
+            font-size: 1.15rem;
+        }
+        
+        .quote-source {
+            display: block;
+            font-size: 0.95rem;
+            color: #b0bec5;
+            margin-bottom: 15px;
+        }
+
+        /* Lời dịch */
+        .dich-nghia {
+            font-weight: bold;
+            color: #ffffff;
+            font-size: 1.15rem;
+        }
+
+        /* Khung Thơ */
+        .poem-block {
+            text-align: center;
+            margin: 40px auto 20px;
+            padding: 25px;
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 213, 79, 0.3);
+            border-radius: 12px;
+            font-style: italic;
+            font-size: 1.25rem;
+            line-height: 2;
+            color: #ffd54f;
+            width: fit-content;
+        }
+
+        /* Hiệu ứng thanh cuộn */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.6); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 213, 79, 0.5); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 213, 79, 0.8); 
+        }
+
+        /* Responsive cho thiết bị di động */
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+                font-size: 1.05rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+            .han-tu {
+                font-size: 1.5rem;
+            }
+            .poem-block {
+                font-size: 1.1rem;
+                width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>VĂN HÓA Á ĐÔNG 20</h1>
+        <h2>Cầu Trời Khấn Phật</h2>
+        
+        <p>Tôn giáo nào cũng có yếu tố niềm tin đối với <span class="hl-divine">Thần Thánh</span> vô hình. Nếu niềm tin đúng thì sẽ tạo ra một hệ sinh thái tốt đẹp cho tín đồ sống và tu dưỡng. Cũng như sóng vô tuyến là vô hình nhưng khi được áp dụng đúng thì tạo ra biết bao tiện ích cho cuộc sống vậy.</p>
+        
+        <p>Sự tôn kính đối với <span class="hl-divine">Thần Thánh</span> thực sự là một yếu tố rất quan trọng trong việc tu dưỡng đạo đức. Triết học là định hướng cần thiết, nhưng phải có sự kết nối với Thần Thánh vô hình mới đủ các yếu tố cần thiết cho một đời sống cao thượng thanh cao.</p>
+        
+        <div class="classic-quote">
+            <span class="han-tu">「敬鬼神而遠之」</span>
+            <span class="han-viet">Kính quỷ thần nhi viễn chi</span>
+            <span class="quote-source">Trích trong Luận Ngữ, thiên "Ung Dã" (雍也)</span>
+            <span class="dich-nghia">(Kính trọng quỷ thần nhưng giữ khoảng cách)</span>
+        </div>
+        
+        <p>Kính trọng Thần Thánh là phải có, nhưng phải thấy trách nhiệm của chính mình (nhi viễn chi), chứ không phải lệ thuộc hoàn toàn vào sự ban ân của Thần Thánh.</p>
+        
+        <p>Ai không có lòng kính trọng Thần Thánh vô hình thì vẫn còn là nông cạn và <span class="hl-superstition">kiêu ngạo</span>, cuối cùng sẽ thất bại.</p>
+        
+        <p>Tuy nhiên, vì Thần Thánh là vô hình nên ta cần một nền đạo học đúng đắn lý giải về Thần Thánh là như thế nào để sự tôn kính của ta không bị trở thành <span class="hl-superstition">mê tín</span>. Nếu ta hiểu đúng về Thần Thánh, ta có thêm một nguồn minh triết cao cả cho đời mình. Nếu ta hiểu sai về Thần Thánh, ta lập tức rơi vào mê tín.</p>
+        
+        <p>Riêng người Việt Nam lại tìm thấy mẫu số chung giữa <span class="hl-divine">Trời và Phật</span>, giữa vị thần tối cao cai quản các cõi và vị thánh tuyệt đối vượt ngoài ba cõi.</p>
+        
+        <div class="poem-block">
+            Chắp tay con khấn Phật Trời<br>
+            Cho con người biết sống đời yêu thương<br>
+            Đừng ai ích kỷ tầm thường<br>
+            Để còn tử tế trên đường muôn phương...
+        </div>
+    </div>
+
+</body>
+</html>

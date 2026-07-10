@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Văn Hóa Á Đông 11 - Giữ An Toàn Bản Thân</title>
+    
+    <!-- Nhúng FontAwesome cho icon (nếu cần) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Thiết lập nền vũ trụ (Tinh vân sắc cam vàng ấm áp tượng trưng cho tình mẫu tử, phụ tử và sự bảo bọc) */
+        body, html {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh vũ trụ tuyệt đẹp từ Unsplash */
+            background-image: url('https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?q=80&w=2500&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Khung chứa nội dung mờ ảo */
+        .container {
+            background-color: rgba(25, 15, 10, 0.85); /* Nền tối ánh nâu/cam trầm */
+            backdrop-filter: blur(12px); /* Hiệu ứng kính mờ */
+            max-width: 850px;
+            padding: 45px 55px;
+            margin: 40px 20px;
+            border-radius: 18px;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.8;
+            font-size: 1.15rem;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 10px rgba(255, 255, 255, 0.4);
+        }
+
+        h2 {
+            text-align: center;
+            color: #ffb74d; /* Vàng cam ấm áp */
+            font-size: 1.6rem;
+            margin-top: 0;
+            margin-bottom: 35px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Highlight từ khóa */
+        .hl-filial {
+            color: #ffb74d; /* Vàng cam: Hiếu đạo */
+            font-weight: bold;
+        }
+
+        .hl-safe {
+            color: #81c784; /* Xanh lá: An toàn, giữ gìn */
+            font-weight: bold;
+        }
+
+        /* Khung trích dẫn kinh điển */
+        .classic-quote {
+            background: linear-gradient(to right, rgba(255, 183, 77, 0.1), rgba(255, 255, 255, 0.02));
+            padding: 25px 30px;
+            border-left: 4px solid #ffb74d;
+            border-radius: 0 8px 8px 0;
+            margin: 25px 0;
+        }
+
+        .source-info {
+            color: #b0bec5;
+            font-size: 1.05rem;
+            margin-bottom: 15px;
+            font-style: italic;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        /* Font chữ Hán */
+        .han-tu {
+            font-family: "KaiTi", "STKaiti", "BiauKai", serif;
+            font-size: 1.8rem;
+            color: #ffd54f;
+            margin-bottom: 12px;
+            display: block;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        /* Âm Hán Việt */
+        .han-viet {
+            font-style: italic;
+            color: #ffe0b2; 
+            margin-bottom: 15px;
+            display: block;
+            font-size: 1.15rem;
+            text-align: center;
+        }
+
+        /* Phân tích câu chữ */
+        .breakdown {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 10px 15px;
+            font-size: 1.05rem;
+            color: #e0e0e0;
+            margin-top: 15px;
+        }
+
+        .breakdown span:nth-child(odd) {
+            font-weight: bold;
+            color: #ffb74d;
+            text-align: right;
+        }
+
+        /* Khung danh sách các việc cần tránh */
+        .safety-list {
+            background-color: rgba(255, 255, 255, 0.03);
+            padding: 20px 25px 20px 25px;
+            border-radius: 8px;
+            border: 1px solid rgba(129, 199, 132, 0.3);
+            margin: 25px 0;
+            list-style: none;
+        }
+
+        .safety-list li {
+            position: relative;
+            margin-bottom: 12px;
+            padding-left: 30px;
+            color: #e8f5e9;
+            text-align: justify;
+        }
+
+        .safety-list li::before {
+            content: "\f132"; /* Icon shield của FontAwesome */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: #81c784;
+        }
+
+        .safety-list li:last-child {
+            margin-bottom: 0;
+        }
+        
+        .conclusion {
+            text-align: center;
+            font-size: 1.25rem;
+            color: #ffb74d; 
+            font-weight: bold;
+            margin-top: 35px;
+            padding: 20px;
+            border-top: 1px dashed rgba(255, 183, 77, 0.4);
+            border-bottom: 1px dashed rgba(255, 183, 77, 0.4);
+        }
+
+        /* Hiệu ứng thanh cuộn */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.6); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 183, 77, 0.5); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 183, 77, 0.8); 
+        }
+
+        /* Responsive cho thiết bị di động */
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+                font-size: 1.05rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+            .han-tu {
+                font-size: 1.5rem;
+            }
+            .breakdown {
+                grid-template-columns: 1fr;
+                gap: 5px;
+                text-align: center;
+            }
+            .breakdown span:nth-child(odd) {
+                text-align: center;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>VĂN HÓA Á ĐÔNG 11</h1>
+        <h2>Giữ An Toàn Bản Thân</h2>
+        
+        <p>Dưới đây là nguyên văn trong <strong>Hiếu Kinh</strong>:</p>
+        
+        <div class="classic-quote">
+            <span class="han-tu">身體髮膚，受之父母，不敢毀傷，孝之始也。</span>
+            <span class="han-viet">Thân thể phát phu, thụ chi phụ mẫu, bất cảm hủy thương, hiếu chi thủy dã.</span>
+            
+            <div class="breakdown">
+                <span>Thân thể phát phu (身體髮膚):</span> <span>thân thể, tóc và da.</span>
+                <span>Thụ chi phụ mẫu (受之父母):</span> <span>nhận từ cha mẹ.</span>
+                <span>Bất cảm hủy thương (不敢毀傷):</span> <span>không dám làm tổn hại.</span>
+                <span>Hiếu chi thủy dã (孝之始也):</span> <span>là khởi đầu của đạo hiếu.</span>
+            </div>
+        </div>
+        
+        <p>Ta sống nhân từ vị tha, quên mình phụng sự mọi người là đúng với đạo Nhân từ của Nho giáo, nhưng phải <span class="hl-safe">giữ gìn thân thể lành lặn</span> vì thân thể này không phải của mình, thân thể này của cha mẹ cho, cha mẹ nuôi lớn, cha mẹ bảo bọc, bây giờ nhỡ đâu xảy ra chuyện gì thì người đau lòng nhất sẽ là cha mẹ. Ý tưởng này rất độc đáo.</p>
+        
+        <p>Ta cứ tưởng <span class="hl-filial">Hiếu đạo</span> là phải lo phụng dưỡng cha mẹ trọn vẹn, nhưng bắt đầu của Hiếu đạo lại là làm ơn giữ gìn sự an toàn của bản thân mình trước để cha mẹ yên lòng, thật là tinh tế.</p>
+        
+        <p>Để thực hiện điều hiếu đạo này, ta phải làm như sau:</p>
+        
+        <ul class="safety-list">
+            <li>Đừng vì hứng chí tham gia các trò chơi chơi mạo hiểm tìm cảm giác mạnh, nhỡ có gì xảy ra thì thật là bất hiếu.</li>
+            <li>Đừng mất cảnh giác với người lạ kẻo bị lừa gạt, bắt cóc, hãm hại.</li>
+            <li>Đừng liều lĩnh đi vào nơi nguy hiểm, đường vắng, vùng tối, khu tội phạm, kẻo bị kẻ xấu hãm hại.</li>
+            <li>Đừng đưa mình vào tình huống nguy hiểm như leo cao thiếu dây đai bảo hiểm, đến quá gần trạm biến thế, đứng giữa trời mưa sét đánh, lại gần nơi xung đột, không bơi giỏi mà nhảy sông cứu người, không đủ thiết bị mà vào lửa cháy cứu người, tò mò dòm ngó theo dõi tổ chức tội phạm nguy hiểm, tranh cãi không kềm chế dẫn đến ẩu đả...</li>
+            <li>Đừng ăn uống sai cách gây bệnh tật.</li>
+            <li>Đừng sống trác táng làm hư hao sức khỏe.</li>
+            <li>Đừng thiếu tập luyện làm suy yếu cơ thể.</li>
+            <li>Không chịu làm việc đem lại lợi ích cho cuộc đời, để cho cơ thể cha mẹ sinh ra trở thành điều vô ích...</li>
+        </ul>
+        
+        <p class="conclusion">
+            Đại khái là Hiếu đạo cho ta cả một hệ thống ý thức về bản thân, cơ thể, sự an toàn, và biết sống đời phụng sự vị tha.
+        </p>
+    </div>
+
+</body>
+</html>

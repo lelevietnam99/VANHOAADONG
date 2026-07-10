@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Văn Hóa Á Đông 15 - Kỷ Sở Bất Dục, Vật Thi Ư Nhân</title>
+    <style>
+        /* Thiết lập nền vũ trụ (Ánh sáng vàng kim tượng trưng cho Khuôn vàng thước ngọc - Golden Rule) */
+        body, html {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh vũ trụ tuyệt đẹp từ Unsplash */
+            background-image: url('https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?q=80&w=2500&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Khung chứa nội dung mờ ảo */
+        .container {
+            background-color: rgba(20, 15, 30, 0.85); /* Nền tối ánh lam/tím trầm */
+            backdrop-filter: blur(12px); /* Hiệu ứng kính mờ */
+            max-width: 850px;
+            padding: 45px 55px;
+            margin: 40px 20px;
+            border-radius: 18px;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.8;
+            font-size: 1.15rem;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 10px rgba(255, 255, 255, 0.4);
+        }
+
+        h2 {
+            text-align: center;
+            color: #ffd54f; /* Vàng kim sáng */
+            font-size: 1.6rem;
+            margin-top: 0;
+            margin-bottom: 35px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Highlight từ khóa */
+        .hl-golden {
+            color: #ffd54f; /* Vàng kim: Golden Rule, chữ Thứ */
+            font-weight: bold;
+        }
+
+        .hl-empathy {
+            color: #81d4fa; /* Xanh lơ nhạt: Cảm thông, tâm lý */
+            font-weight: bold;
+        }
+
+        /* Khung trích dẫn kinh điển */
+        .classic-quote {
+            background: linear-gradient(to right, rgba(255, 213, 79, 0.1), rgba(255, 255, 255, 0.02));
+            padding: 25px 30px;
+            border-left: 4px solid #ffd54f;
+            border-radius: 0 8px 8px 0;
+            margin: 30px 0;
+        }
+
+        .source-info {
+            color: #b0bec5;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            font-style: italic;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 10px;
+        }
+
+        /* Font chữ Hán */
+        .han-tu {
+            font-family: "KaiTi", "STKaiti", "BiauKai", serif;
+            font-size: 1.7rem;
+            color: #ffd54f;
+            margin-bottom: 12px;
+            display: block;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        /* Âm Hán Việt */
+        .han-viet {
+            font-style: italic;
+            color: #81d4fa; 
+            margin-bottom: 15px;
+            display: block;
+            font-size: 1.15rem;
+            text-align: center;
+        }
+
+        /* Lời dịch */
+        .dich-nghia {
+            font-weight: bold;
+            color: #ffffff;
+            font-size: 1.15rem;
+            text-align: center;
+            display: block;
+        }
+
+        /* Khung chứa các cặp hành vi đối lập */
+        .behavior-block {
+            background-color: rgba(255, 255, 255, 0.04);
+            padding: 20px 25px;
+            border-radius: 8px;
+            border: 1px dashed rgba(129, 212, 250, 0.4);
+            margin: 25px 0;
+            color: #e0e0e0;
+            font-style: italic;
+            line-height: 2;
+            text-align: center;
+        }
+
+        .behavior-block span {
+            color: #b3e5fc;
+            font-weight: bold;
+            margin: 0 5px;
+        }
+        
+        .conclusion {
+            text-align: center;
+            font-size: 1.25rem;
+            color: #ffd54f; 
+            font-weight: bold;
+            margin-top: 35px;
+            padding: 20px;
+            border-top: 1px dashed rgba(255, 213, 79, 0.4);
+            border-bottom: 1px dashed rgba(255, 213, 79, 0.4);
+        }
+
+        /* Hiệu ứng thanh cuộn */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.6); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 213, 79, 0.5); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 213, 79, 0.8); 
+        }
+
+        /* Responsive cho thiết bị di động */
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+                font-size: 1.05rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+            .han-tu {
+                font-size: 1.5rem;
+            }
+            .classic-quote {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>VĂN HÓA Á ĐÔNG 15</h1>
+        <h2>Kỷ Sở Bất Dục, Vật Thi Ư Nhân</h2>
+        
+        <p>Câu này xuất phát từ <strong>Luận Ngữ (論語)</strong>, một trong những tác phẩm kinh điển của Nho giáo do Khổng Tử và các môn đệ ghi lại.</p>
+        
+        <div class="classic-quote">
+            <div class="source-info">
+                Tác phẩm: Luận Ngữ (論語)<br>
+                Thiên: Nhan Uyên (顏淵)
+            </div>
+            <span class="han-tu">子貢問曰：「有一言而可以終身行之者乎？」<br>子曰：「其恕乎！己所不欲，勿施於人。」</span>
+            <span class="han-viet">Tử Cống vấn viết: "Hữu nhất ngôn nhi khả dĩ chung thân hành chi giả hồ?"<br>Tử viết: "Kỳ thứ hồ! Kỷ sở bất dục, vật thi ư nhân."</span>
+            <span class="dich-nghia">Tử Cống hỏi rằng: "Có một lời nào có thể thi hành trọn đời được chăng?"<br>Khổng Tử đáp: "Đó là chữ <span style="color:#ffd54f;">Thứ</span> chăng! Điều gì mình không muốn, thì đừng làm cho người khác."</span>
+        </div>
+        
+        <p><strong>"Kỷ sở bất dục, vật thi ư nhân"</strong> nghĩa là: Điều gì bản thân mình không muốn, thì đừng làm cho người khác.</p>
+        
+        <p>Đây là một nguyên tắc đối nhân xử thế, tương đương với <span class="hl-golden">"Golden Rule"</span> trong đạo đức phương Tây: <em>Do not do to others what you do not want done to yourself.</em></p>
+        
+        <p>Thật là khó khi chọn lựa hành vi đúng sai để đối xử với người. Khổng Tử đã dùng <span class="hl-empathy">tiêu chuẩn tâm lý</span> để giúp học trò biết chọn lựa. Cứ tưởng tượng người khác đối xử với mình như thế, mình sẽ vui hay buồn, dựa vào đó mà chọn lựa cách đối xử với mọi người. Dĩ nhiên phương pháp này chưa phải tuyệt đối đúng, nhưng cũng tạm thời cho ta một tiêu chuẩn tương đối để đối xử với mọi người.</p>
+        
+        <div class="behavior-block">
+            Giúp đỡ <span>hay</span> bỏ mặc<br>
+            Tha thứ <span>hay</span> trừng phạt<br>
+            Khen ngợi <span>hay</span> chê bai<br>
+            Dịu dàng <span>hay</span> gay gắt<br>
+            Trung thành <span>hay</span> phản bội<br>
+            Trong sạch <span>hay</span> tham lam<br>
+            Bênh vực <span>hay</span> ức hiếp...
+        </div>
+        
+        <p>Vô số lối cư xử mà ta cần cho mình hay tránh cho mình, người khác cũng sẽ giống như vậy.</p>
+        
+        <p class="conclusion">
+            Hãy cân nhắc đặt mình vào tâm người để thông cảm hơn, tử tế hơn và cẩn thận kềm chế hơn.
+        </p>
+    </div>
+
+</body>
+</html>

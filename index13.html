@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Văn Hóa Á Đông 13 - Giúp Người Quên Công</title>
+    <style>
+        /* Thiết lập nền vũ trụ (Dải tinh vân ánh xanh thanh tao, tượng trưng cho sự nhẹ nhàng, vô ngã) */
+        body, html {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh vũ trụ tuyệt đẹp từ Unsplash */
+            background-image: url('https://images.unsplash.com/photo-1484589065579-248aad0d8b13?q=80&w=2500&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Khung chứa nội dung mờ ảo */
+        .container {
+            background-color: rgba(15, 20, 30, 0.85); /* Nền tối ánh lam trầm */
+            backdrop-filter: blur(12px); /* Hiệu ứng kính mờ */
+            max-width: 850px;
+            padding: 45px 55px;
+            margin: 40px 20px;
+            border-radius: 18px;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.8;
+            font-size: 1.15rem;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 10px rgba(255, 255, 255, 0.4);
+        }
+
+        h2 {
+            text-align: center;
+            color: #81d4fa; /* Xanh lơ sáng */
+            font-size: 1.6rem;
+            margin-top: 0;
+            margin-bottom: 35px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Highlight từ khóa */
+        .hl-give {
+            color: #81d4fa; /* Xanh lơ: Giúp người, quên công */
+            font-weight: bold;
+        }
+
+        .hl-remember {
+            color: #ffd54f; /* Vàng sáng: Nhớ ơn, trân trọng */
+            font-weight: bold;
+        }
+
+        /* Khung trích dẫn kinh điển */
+        .classic-quote {
+            background: linear-gradient(to right, rgba(129, 212, 250, 0.1), rgba(255, 255, 255, 0.02));
+            padding: 20px 25px;
+            border-left: 4px solid #81d4fa;
+            border-radius: 0 8px 8px 0;
+            margin: 25px 0;
+        }
+
+        .source-title {
+            color: #b0bec5;
+            font-weight: bold;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Font chữ Hán */
+        .han-tu {
+            font-family: "KaiTi", "STKaiti", "BiauKai", serif;
+            font-size: 1.8rem;
+            color: #ffd54f;
+            margin-bottom: 10px;
+            display: block;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        /* Âm Hán Việt */
+        .han-viet {
+            font-style: italic;
+            color: #b3e5fc; 
+            margin-bottom: 10px;
+            display: block;
+            font-size: 1.15rem;
+            text-align: center;
+        }
+
+        /* Lời dịch */
+        .dich-nghia {
+            font-weight: bold;
+            color: #ffffff;
+            font-size: 1.1rem;
+            text-align: center;
+            display: block;
+        }
+
+        /* Quote tiếng anh */
+        .english-quote {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 10px 15px;
+            border-radius: 6px;
+            font-style: italic;
+            color: #e1bee7;
+            display: inline-block;
+            margin-top: 5px;
+        }
+
+        .conclusion {
+            text-align: center;
+            font-size: 1.25rem;
+            color: #81d4fa; 
+            font-weight: bold;
+            margin-top: 35px;
+            padding: 20px;
+            border-top: 1px dashed rgba(129, 212, 250, 0.4);
+            border-bottom: 1px dashed rgba(129, 212, 250, 0.4);
+        }
+
+        /* Hiệu ứng thanh cuộn */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.6); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(129, 212, 250, 0.5); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(129, 212, 250, 0.8); 
+        }
+
+        /* Responsive cho thiết bị di động */
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+                font-size: 1.05rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+            .han-tu {
+                font-size: 1.5rem;
+            }
+            .classic-quote {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>VĂN HÓA Á ĐÔNG 13</h1>
+        <h2>Giúp Người Quên Công</h2>
+        
+        <div class="classic-quote">
+            <div class="source-title">1. Trong tinh thần Nho giáo:</div>
+            <span class="han-tu">君子之於人也，恭而有禮，施而不求報。</span>
+            <span class="han-viet">Quân tử chi ư nhân dã, cung nhi hữu lễ, thi nhi bất cầu báo.</span>
+            <span class="dich-nghia">Nghĩa: Người quân tử đối đãi với người thì cung kính và có lễ, thi ân mà không cầu được báo đáp.</span>
+        </div>
+
+        <div class="classic-quote">
+            <div class="source-title">2. Trong Đạo giáo – Trích Thái Thượng Cảm Ứng Thiên (太上感應篇):</div>
+            <span class="han-tu">施恩不求報，與人不追悔。</span>
+            <span class="han-viet">Thi ân bất cầu báo, dữ nhân bất truy hối.</span>
+            <span class="dich-nghia">Nghĩa: Thi ân không cầu báo đáp, giúp người không hối hận.</span>
+        </div>
+        
+        <p>Sống trên đời thế nào cũng có tương tác qua lại giữa mọi người với nhau, nghĩa là giúp qua giúp lại. Đó là chuyện bình thường, nhưng tâm lý ta sẽ không bình thường. Ta sẽ bị cái tâm lý kỳ cục là, ta giúp ai thì cứ ghi nhớ mãi, còn ai giúp ta thì ta mau quên. Đây cũng là nguyên nhân gây bệnh đãng trí tuổi già.</p>
+        
+        <p>Người quân tử thì <span class="hl-give">"thi ân bất cầu báo, thọ ân bất cảm vong"</span> giúp ai không nhớ nữa, ơn ai quyết chẳng quên. Đạo đức này đi ngược lại khuynh hướng tự nhiên của con người nên phải cố gắng lắm mới thành tựu.</p>
+        
+        <p>Giúp người rồi nhớ mãi khiến ta sẽ kiêu ngạo cho mình hơn người, rồi mất đạo đức. Bản năng tự nhiên cứ thúc đẩy ta nhớ mãi việc giúp người rất khó gạt bỏ, ta phải cố gắng gạt bỏ, phải cầu Phật gia hộ cho mình quên công để nhẹ lòng tiến tu đến vô ngã. Nếu người kia cám ơn thì ta nên khiêm tốn đáp lại là được tương tác với bạn là hạnh phúc của tôi ạ.<br>
+        <span class="english-quote">It's my happiness having this interaction with you.</span></p>
+        
+        <p>Ngược lại, mang ơn ai thì nhất quyết <span class="hl-remember">không bao giờ quên</span>. Dù sau này có đền ơn lại cũng không được nói là tôi đã đền ơn xong rồi nên xem như đã huề. Không được như thế. Dù có đền ơn một nghìn lần thì ân nghĩa ban đầu ta thọ nhận vẫn là cao quý vĩnh viễn không có chuyện đền ơn xong rồi.</p>
+        
+        <p>Sẽ có người hỏi sao mà nặng nề đến vậy, nhớ ơn và đền ơn là được rồi, cần gì phải giữ mãi trong lòng chi cho nặng lòng vậy.</p>
+        
+        <p>Câu trả lời là nếu không ghi nhớ ơn người mãi mãi thì mới là nặng nề vì thiếu đạo đức. Bậc quân tử có đạo đức của thánh hiền, <span class="hl-remember">một lần thọ ơn nghìn kiếp không quên</span>, dù đền ơn rồi vẫn còn trân trọng cái ân nghĩa ban đầu đó mãi.</p>
+        
+        <p class="conclusion">
+            Lạ một điều là khi ta nhớ ơn thì lòng ta nhẹ nhàng sáng suốt. Có những ơn nghĩa mà ta không còn cơ hội để đền ơn nữa, nhưng cứ phải trân trọng ghi khắc trong lòng. Đó là đạo của người quân tử. Kẻ hời hợt sẽ cho ta vớ vẩn không thực tế, nhưng ai thực hành đạo của thánh hiền sẽ biết đó là điều đúng đắn không thể làm khác đi.
+        </p>
+    </div>
+
+</body>
+</html>
