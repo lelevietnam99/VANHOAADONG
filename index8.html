@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Văn Hóa Á Đông 08 - Lòng Trung Thành</title>
+    <style>
+        /* Thiết lập nền vũ trụ (Đường chân trời phát sáng rực rỡ, biểu tượng cho sự bảo vệ quốc gia và lòng kiên định) */
+        body, html {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh vũ trụ tuyệt đẹp từ Unsplash */
+            background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2500&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Khung chứa nội dung mờ ảo */
+        .container {
+            background-color: rgba(15, 22, 35, 0.85); /* Nền tối ánh lam sâu thẳm */
+            backdrop-filter: blur(12px); /* Hiệu ứng kính mờ */
+            max-width: 850px;
+            padding: 45px 55px;
+            margin: 40px 20px;
+            border-radius: 18px;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.8;
+            font-size: 1.15rem;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 10px rgba(255, 255, 255, 0.4);
+        }
+
+        h2 {
+            text-align: center;
+            color: #ffd54f; /* Vàng kim uý nghi */
+            font-size: 1.6rem;
+            margin-top: 0;
+            margin-bottom: 35px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Highlight từ khóa */
+        .hl-loyal {
+            color: #ffd54f; /* Vàng kim: Trung thành */
+            font-weight: bold;
+        }
+
+        .hl-nation {
+            color: #81d4fa; /* Xanh lơ nhạt: Quốc gia, quốc gia */
+            font-weight: bold;
+        }
+
+        /* Khung trích dẫn kinh điển */
+        .classic-quote {
+            background: linear-gradient(to right, rgba(255, 213, 79, 0.15), rgba(255, 255, 255, 0.02));
+            padding: 25px 30px;
+            border-left: 4px solid #ffd54f;
+            border-radius: 0 8px 8px 0;
+            margin: 25px 0;
+            text-align: center;
+        }
+
+        .classic-quote .quote-text {
+            font-size: 1.4rem;
+            color: #ffe082;
+            font-weight: bold;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .classic-quote .quote-meaning {
+            font-size: 1.1rem;
+            color: #e0e0e0;
+        }
+
+        /* Khung điều kiện tu dưỡng */
+        .requirements-block {
+            background-color: rgba(255, 255, 255, 0.04);
+            padding: 20px 25px;
+            border-radius: 8px;
+            border: 1px dashed rgba(129, 212, 250, 0.4);
+            margin: 25px 0;
+            color: #e1f5fe;
+        }
+
+        .requirements-block strong {
+            color: #81d4fa;
+        }
+        
+        .conclusion {
+            text-align: justify;
+            font-size: 1.25rem;
+            color: #ffd54f; 
+            font-weight: bold;
+            margin-top: 35px;
+            padding: 25px;
+            border-top: 1px dashed rgba(255, 213, 79, 0.4);
+            border-bottom: 1px dashed rgba(255, 213, 79, 0.4);
+            background-color: rgba(255, 213, 79, 0.05);
+            border-radius: 8px;
+        }
+
+        /* Hiệu ứng thanh cuộn */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.6); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 213, 79, 0.5); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 213, 79, 0.8); 
+        }
+
+        /* Responsive cho thiết bị di động */
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+                font-size: 1.05rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+            .classic-quote .quote-text {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>VĂN HÓA Á ĐÔNG 08</h1>
+        <h2>Lòng Trung Thành</h2>
+        
+        <p>Văn hóa Á ĐÔNG với Nho Giáo đề cao <span class="hl-loyal">lòng trung thành</span> đến độ gần như cực đoan. Ta hay nghe câu nói nổi tiếng (không rõ nguồn gốc) là:</p>
+        
+        <div class="classic-quote">
+            <div class="quote-text">"Quân xử thần tử, thần bất tử bất trung"</div>
+            <div class="quote-meaning">
+                Nghĩa là, khi vua ra lệnh cho bầy tôi phải chết, nếu bầy tôi không dám chết (mà không cần hỏi lý do) thì kẻ đó là loại bất trung, mà kẻ mang tiếng bất trung thì bị mọi người phỉ nhổ.
+            </div>
+        </div>
+        
+        <p>Vì sao thời xưa đề cao lòng trung thành đến cực độ như thế?</p>
+        
+        <p>Bởi vì Vua là người chịu trách nhiệm với vận mệnh cả một <span class="hl-nation">quốc gia</span>, rất cần những người vâng lời, trung thành, hợp tác, tài giỏi để việc nước được thành công phát triển và ổn định. Nếu trong bầy tôi quần thần có những kẻ phản bội, không hết lòng, ỡm ờ, giả dối thì đất nước lâm nguy, giặc luồn vào mua chuộc phá nát hết triều đình rồi đánh chiếm quốc gia.</p>
+        
+        <p>Khi nói đến việc nước ta hay chú trọng vào kế sách, nhưng nếu không có cái lõi của sự trung thành thì kế sách nào cũng hỏng, các bí mật quốc gia bị lén tuồn ra ngoài, giặc lên kế hoạch phá hoại từ đầu đưa quốc gia lọt bẫy sụp đổ. <span class="hl-loyal">Lòng trung thành là vô hình nhưng là yếu tố then chốt bảo vệ quốc gia.</span></p>
+        
+        <div class="requirements-block">
+            Nhưng tạo được lòng trung thành cho tâm hồn của mình không phải dễ, phải là người có <strong>đạo đức, có trí tuệ, có ý chí, có bản lĩnh, có phẩm hạnh, có phước</strong>, mới có thể tạo nên một quyết tâm trung thành như sắt đá, để cùng nhau bảo vệ đất nước quê hương.
+        </div>
+        
+        <p>Dĩ nhiên ta cũng cần vị vua là bậc thánh quân anh minh để sự trung thành đó có thêm sự tôn kính, ngưỡng mộ, yêu quý kèm theo vô cùng đẹp đẽ.</p>
+        
+        <p>Trách nhiệm của người lãnh đạo là biết tu dưỡng để tài đức sáng ngời như bậc thánh, nhưng trách nhiệm của người dưới là trung thành, <strong>trung thành tuyệt đối</strong>, để giặc không luồn vào dụ dỗ hứa hẹn mua chuộc lôi kéo được.</p>
+        
+        <p>Ở những mức độ thấp hơn như gia đình, đạo giáo, công ty, cơ quan, đoàn thể, bạn bè... ai cũng cần có sự trung thành, chung thủy, tình nghĩa sắt son bền chặt. Càng có sự trung thành chừng nào thì cộng đồng càng bền vững ổn định chừng nấy, và những thành viên trong cộng đồng đó càng được yên tâm để còn dành tinh thần sức lực lo những việc khác nữa.</p>
+        
+        <p>Tuy nhiên, không phải cứ nói trung thành là có trung thành, không phải nghĩ về trung thành là thành tựu phẩm chất trung thành. Đó là một công phu tu dưỡng lâu dài, phải đối diện nhiều thử thách cám dỗ để trở nên sắt đá. Phải có ai đòi giết để ta có sợ mà chấp nhận phản bội hay không; phải có ai hứa hẹn danh lợi để ta có ham mà chấp nhận quay lưng hay không. Chính những lúc bị hăm dọa, được hứa hẹn, mới là những lúc rèn luyện lòng trung thành kiên cường thêm, chứ còn mọi việc êm ả thì không biết được lòng trung thành có sắt đá chưa.</p>
+        
+        <div class="conclusion">
+            Người quân tử biết khước từ sự hứa hẹn, bậc trượng phu dám chấp nhận cả cái chết để giữ lòng trung thành, sau khi chết đều lên cõi giới cao làm vị thần có uy lực lớn. Kẻ tiểu nhân phản bội sau khi chết đều đọa làm súc sinh hèn kém.
+        </div>
+    </div>
+
+</body>
+</html>

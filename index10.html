@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Văn Hóa Á Đông 10 - Vừa Với Sức Mình</title>
+    <style>
+        /* Thiết lập nền vũ trụ (Sắc xanh tĩnh lặng, biểu tượng cho sự cân bằng và tự nhận thức) */
+        body, html {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh vũ trụ tuyệt đẹp từ Unsplash */
+            background-image: url('https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?q=80&w=2500&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Khung chứa nội dung mờ ảo */
+        .container {
+            background-color: rgba(15, 20, 25, 0.85); /* Nền tối ánh lam trầm */
+            backdrop-filter: blur(12px); /* Hiệu ứng kính mờ */
+            max-width: 850px;
+            padding: 45px 55px;
+            margin: 40px 20px;
+            border-radius: 18px;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.8;
+            font-size: 1.15rem;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 10px rgba(255, 255, 255, 0.4);
+        }
+
+        h2 {
+            text-align: center;
+            color: #81d4fa; /* Xanh lơ nhạt thanh tao */
+            font-size: 1.6rem;
+            margin-top: 0;
+            margin-bottom: 35px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Khung trích dẫn kinh điển */
+        .classic-quote {
+            background: linear-gradient(to right, rgba(129, 212, 250, 0.1), rgba(255, 255, 255, 0.02));
+            padding: 25px 30px;
+            border-left: 4px solid #81d4fa;
+            border-radius: 0 8px 8px 0;
+            margin: 25px 0;
+        }
+
+        .source-info {
+            color: #b0bec5;
+            font-size: 1.05rem;
+            margin-bottom: 15px;
+            font-style: italic;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        /* Font chữ Hán */
+        .han-tu {
+            font-family: "KaiTi", "STKaiti", "BiauKai", serif;
+            font-size: 1.8rem;
+            color: #ffd54f; /* Vàng kim */
+            margin-bottom: 12px;
+            display: block;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        /* Âm Hán Việt */
+        .han-viet {
+            font-style: italic;
+            color: #e1f5fe; 
+            margin-bottom: 20px;
+            display: block;
+            font-size: 1.15rem;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* Phân tích câu chữ */
+        .breakdown {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 10px 15px;
+            font-size: 1.05rem;
+            color: #e0e0e0;
+            background-color: rgba(0,0,0,0.2);
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .breakdown span:nth-child(odd) {
+            font-weight: bold;
+            color: #ffd54f;
+            text-align: right;
+        }
+
+        /* Các khối phân tích ý nghĩa */
+        .principle-block {
+            background-color: rgba(255, 255, 255, 0.04);
+            padding: 20px 25px;
+            border-radius: 8px;
+            border: 1px solid rgba(129, 212, 250, 0.3);
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        
+        .principle-title {
+            color: #ffd54f;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hl-danger {
+            color: #ffb74d;
+            font-style: italic;
+        }
+        
+        .conclusion {
+            text-align: center;
+            font-size: 1.25rem;
+            color: #81d4fa; 
+            font-weight: bold;
+            margin-top: 35px;
+            padding: 20px;
+            border-top: 1px dashed rgba(129, 212, 250, 0.4);
+            border-bottom: 1px dashed rgba(129, 212, 250, 0.4);
+        }
+
+        /* Hiệu ứng thanh cuộn */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.6); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(129, 212, 250, 0.5); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(129, 212, 250, 0.8); 
+        }
+
+        /* Responsive cho thiết bị di động */
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+                font-size: 1.05rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+            .han-tu {
+                font-size: 1.5rem;
+            }
+            .breakdown {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .breakdown span:nth-child(odd) {
+                text-align: center;
+                margin-top: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>VĂN HÓA Á ĐÔNG 10</h1>
+        <h2>Vừa Với Sức Mình</h2>
+        
+        <p>Trong Hệ Từ Luận có câu:</p>
+        
+        <div class="classic-quote">
+            <span class="han-tu">德薄而位尊，知小而謀大，<br>力少而任重，鮮不及矣。</span>
+            <span class="han-viet">Đức bạc nhi vị tôn, tri tiểu nhi mưu đại, lực thiểu nhi nhậm trọng, tiển bất cập dã.</span>
+            
+            <div class="breakdown">
+                <span>Đức bạc:</span> <span>đức hạnh mỏng manh</span>
+                <span>Nhi:</span> <span>mà, lại</span>
+                <span>Vị tôn:</span> <span>địa vị cao quý</span>
+                <span>Tri tiểu:</span> <span>biết ít</span>
+                <span>Mưu đại:</span> <span>mưu tính việc lớn</span>
+                <span>Lực thiểu:</span> <span>sức lực ít ỏi</span>
+                <span>Nhậm trọng:</span> <span>gánh vác việc nặng</span>
+                <span>Tiển bất cập dã:</span> <span>hiếm khi không gặp họa, khó tránh khỏi thất bại</span>
+            </div>
+        </div>
+        
+        <p>Ta hay nhắm đến nơi ngoài sức của mình, mong điều vượt quá cái phước của mình, tức là tự đặt mình vào <span class="hl-danger">nơi nguy hiểm</span>.</p>
+        
+        <div class="principle-block">
+            <span class="principle-title">Ý thứ nhất: Đức bạc nhi vị tôn</span>
+            Phước đức mỏng mà ở vị trí tôn quý, đó là họa chứ không phải hay ho gì. Ai cảm thấy mình Đức bạc thì nên lui khỏi vị trí cao quý để về tu dưỡng thêm, tạo phúc thêm, chứ đừng ham danh lợi trên cao vì chỗ đó nhiều sóng gió, nhiều kẻ thù, nhiều người mưu hại.
+        </div>
+
+        <div class="principle-block">
+            <span class="principle-title">Ý thứ hai: Tri tiểu nhi mưu đại</span>
+            Biết ít quá, chưa đủ kiến thức, chưa đủ thông tin, chưa đủ trình độ, nhưng lại tính làm chuyện lớn, thế nào cũng thất bại, thế nào cũng gặp rắc rối, nhất là thế nào cũng gặp đối thủ hung ác mà ta không ngờ được (tại vì chưa biết rõ về các phe khác). Ví dụ như muốn lập dự án đầu tư khu dân cư, nhưng kiến thức về xây dựng quy hoạch xã hội ít quá, chỉ có tiền, dù có xây xong chưa chắc có khách hàng. Muốn làm gì cần phải tìm hiểu đến tận cùng từng hạt bụi của lĩnh vực đó.
+        </div>
+
+        <div class="principle-block">
+            <span class="principle-title">Ý thứ ba: Lực thiểu nhi nhậm trọng</span>
+            Năng lực kém mà lãnh nhiệm vụ khó khăn, thế nào cũng thất bại. Chẳng hạn như viên sĩ quan mới ra trường chưa có nhiều kinh nghiệm đã vội nhận nhiệm vụ điều tra vụ trọng án, mới điều tra nửa chừng đã bị sát hại chỉ vì không đủ sức đối phó với thế lực ngầm đứng sau vụ trọng án này.
+        </div>
+        
+        <p class="conclusion">
+            Ba ý cảnh báo của người xưa là một sự khôn ngoan và đạo đức để nhắc mọi người nên hiểu về mình rõ hơn trước khi làm điều gì. Đừng làm vì thích, mà chỉ nên làm vì phụng sự và đầu tiên phải biết lượng sức mình, phải trau dồi trí tuệ và công đức mãi.
+        </p>
+    </div>
+
+</body>
+</html>

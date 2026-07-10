@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Văn Hóa Á Đông 05 - Chánh Tà</title>
+    <style>
+        /* Thiết lập nền vũ trụ (Ánh sáng xuyên qua bóng tối, biểu tượng cho sự phân định Chánh - Tà) */
+        body, html {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh vũ trụ tuyệt đẹp từ Unsplash */
+            background-image: url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=2500&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Khung chứa nội dung mờ ảo */
+        .container {
+            background-color: rgba(15, 18, 25, 0.85); /* Nền tối ánh lam xám */
+            backdrop-filter: blur(12px); /* Hiệu ứng kính mờ */
+            max-width: 850px;
+            padding: 45px 55px;
+            margin: 40px 20px;
+            border-radius: 18px;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.8;
+            font-size: 1.15rem;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 10px rgba(255, 255, 255, 0.4);
+        }
+
+        h2 {
+            text-align: center;
+            color: #e0e0e0; 
+            font-size: 1.6rem;
+            margin-top: 0;
+            margin-bottom: 35px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Highlight từ khóa */
+        .hl-chanh {
+            color: #4fc3f7; /* Xanh dương sáng: Chánh, ngay thẳng, Quân tử */
+            font-weight: bold;
+        }
+
+        .hl-ta {
+            color: #ff8a65; /* Đỏ cam: Tà, cong quẹo, Tiểu nhân */
+            font-weight: bold;
+        }
+
+        /* Khung chứa các cặp so sánh Chánh - Tà */
+        .contrast-container {
+            margin: 30px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .contrast-item {
+            background-color: rgba(255, 255, 255, 0.03);
+            border-radius: 8px;
+            padding: 15px 20px;
+            display: flex;
+            flex-direction: column;
+            border-left: 4px solid #4fc3f7;
+            border-right: 4px solid #ff8a65;
+        }
+
+        .contrast-item div {
+            padding: 5px 0;
+        }
+
+        /* So sánh Quân tử - Tiểu nhân */
+        .character-contrast {
+            background: linear-gradient(135deg, rgba(79, 195, 247, 0.05) 0%, rgba(255, 138, 101, 0.05) 100%);
+            border: 1px dashed rgba(255, 255, 255, 0.2);
+            padding: 20px 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+
+        .character-contrast p {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .character-contrast p:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .conclusion {
+            text-align: center;
+            font-size: 1.25rem;
+            color: #ffffff; 
+            font-weight: bold;
+            margin-top: 35px;
+            padding: 20px;
+            border-top: 1px dashed rgba(255, 255, 255, 0.3);
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+            letter-spacing: 1px;
+        }
+
+        /* Responsive */
+        @media (min-width: 768px) {
+            .contrast-item {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .contrast-item div {
+                width: 48%;
+                padding: 0;
+            }
+            .contrast-item .ta-side {
+                text-align: right;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+                font-size: 1.05rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+        }
+
+        /* Hiệu ứng thanh cuộn */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.6); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.4); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.7); 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>VĂN HÓA Á ĐÔNG 05</h1>
+        <h2>Chánh & Tà</h2>
+        
+        <p style="text-align: center; font-size: 1.25rem; font-weight: bold; color: #e0e0e0;">
+            <span class="hl-chanh">Chánh</span> - Chính - là ngay thẳng.<br>
+            <span class="hl-ta">Tà</span> là cong quẹo.
+        </p>
+        
+        <div class="contrast-container">
+            <div class="contrast-item">
+                <div class="chanh-side"><span class="hl-chanh">Chánh</span> có nghĩa là chân thật;</div>
+                <div class="ta-side"><span class="hl-ta">tà</span> có nghĩa là giả dối.</div>
+            </div>
+            <div class="contrast-item">
+                <div class="chanh-side"><span class="hl-chanh">Chánh</span> có nghĩa là cư xử theo đạo lý;</div>
+                <div class="ta-side"><span class="hl-ta">tà</span> có nghĩa là cư xử theo thủ đoạn.</div>
+            </div>
+            <div class="contrast-item">
+                <div class="chanh-side"><span class="hl-chanh">Chánh</span> có nghĩa là lòng trong sáng đạo đức;</div>
+                <div class="ta-side"><span class="hl-ta">tà</span> có nghĩa là lòng hiểm ác xảo quyệt.</div>
+            </div>
+            <div class="contrast-item">
+                <div class="chanh-side"><span class="hl-chanh">Chánh</span> có nghĩa là độ lượng chấp nhận thiệt thòi để giữ lời hứa;</div>
+                <div class="ta-side"><span class="hl-ta">tà</span> có nghĩa là thấy bất lợi thì nuốt lời.</div>
+            </div>
+            <div class="contrast-item">
+                <div class="chanh-side"><span class="hl-chanh">Chánh</span> có nghĩa là bộc trực thấy sao nói vậy;</div>
+                <div class="ta-side"><span class="hl-ta">tà</span> có nghĩa là nghĩ một đằng nói một nẻo.</div>
+            </div>
+        </div>
+        
+        <p><span class="hl-chanh">Bậc quân tử</span> thì giữ đạo nên khó dùng mưu kế để sống ở đời, <span class="hl-ta">kẻ tiểu nhân</span> hiểm ác thì bất kể đạo lý, chẳng màng nghĩa khí, chỉ làm sao được lợi phần mình.</p>
+        
+        <p>Trong mỗi con người đều có cả Chánh và Tà. Người biết tu dưỡng thì phần Chánh lớn dần. Kẻ không biết tu dưỡng thì phần Tà lớn dần.</p>
+        
+        <p>Khi nào phần Chánh chiếm phần lớn tuyệt đối thì đây là bậc quân tử hiền nhân, có thể gọi như thánh triết. Nếu phần Tà chiếm hết tâm hồn thì kẻ này là tiểu nhân đê tiện đáng khinh.</p>
+        
+        <div class="character-contrast">
+            <p><span class="hl-chanh">Bậc quân tử</span> tin ở Trời cao thấy biết tất cả, nhưng đặt trách nhiệm nơi chính mình phải sống xứng đáng với Trời đất mà không có gì phải hổ thẹn. Bậc quân tử tin Trời mà không cầu cạnh. <span class="hl-ta">Kẻ tiểu nhân</span> cầu cạnh mà bất kính.</p>
+            
+            <p><span class="hl-chanh">Bậc quân tử</span> khi đã chọn minh chủ thì một lòng sắt đá trung thành. <span class="hl-ta">Kẻ tiểu nhân</span> thấy ở đâu mạnh thì theo để được lợi chứ không trung thành với ai.</p>
+            
+            <p><span class="hl-chanh">Quân tử</span> xem sự trung thành là máu thịt. <span class="hl-ta">Tiểu nhân</span> xem lợi ích cá nhân là lẽ sống.</p>
+            
+            <p><span class="hl-chanh">Quân tử</span> vui trong đạo lý, <span class="hl-ta">kẻ tiểu nhân</span> vui trong danh lợi.</p>
+        </div>
+        
+        <p class="conclusion">
+            Học đạo Nho phải phân biệt rạch ròi Chánh Tà để giữ tâm hồn không sai sót từng chút một.
+        </p>
+    </div>
+
+</body>
+</html>

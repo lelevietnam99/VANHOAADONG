@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Văn Hóa Á Đông 06 - Vì Sao Gia Đình Ngày Xưa Bền Vững</title>
+    <style>
+        /* Thiết lập nền vũ trụ (Bầu trời đêm đầy sao tĩnh lặng, tượng trưng cho sự bình yên và bền vững của gia đình) */
+        body, html {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh bầu trời đêm/vũ trụ bình yên từ Unsplash */
+            background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=2500&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Khung chứa nội dung mờ ảo */
+        .container {
+            background-color: rgba(20, 15, 30, 0.85); /* Nền tối ánh tím trầm/xám đêm */
+            backdrop-filter: blur(12px); /* Hiệu ứng kính mờ */
+            max-width: 850px;
+            padding: 45px 55px;
+            margin: 40px 20px;
+            border-radius: 18px;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.8;
+            font-size: 1.15rem;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 10px rgba(255, 255, 255, 0.4);
+        }
+
+        h2 {
+            text-align: center;
+            color: #f48fb1; /* Hồng phớt nhẹ nhàng, tượng trưng cho tình cảm gia đình */
+            font-size: 1.6rem;
+            margin-top: 0;
+            margin-bottom: 35px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Highlight từ khóa */
+        .hl-logic {
+            color: #81d4fa; /* Xanh lơ: Lý trí, trách nhiệm */
+            font-weight: bold;
+        }
+
+        .hl-emotion {
+            color: #f48fb1; /* Hồng: Cảm xúc, tình yêu */
+            font-weight: bold;
+        }
+
+        .hl-stable {
+            color: #ffb74d; /* Vàng cam: Bền vững, chân lý */
+            font-weight: bold;
+        }
+
+        /* Khung chứa công thức hôn nhân */
+        .formula-block {
+            background-color: rgba(244, 143, 177, 0.08);
+            border: 2px dashed rgba(244, 143, 177, 0.4);
+            padding: 25px;
+            text-align: center;
+            border-radius: 12px;
+            margin: 30px 0;
+            color: #ffe0b2;
+            font-size: 1.3rem;
+            font-weight: bold;
+            line-height: 1.8;
+            letter-spacing: 1px;
+        }
+        
+        .formula-block span.math-sign {
+            color: #f48fb1;
+            margin: 0 10px;
+        }
+
+        .formula-sub {
+            display: block;
+            font-size: 1.05rem;
+            color: #b0bec5;
+            font-style: italic;
+            font-weight: normal;
+            margin-top: 15px;
+        }
+
+        /* Khung kết luận đậm chất thơ */
+        .romantic-ending {
+            text-align: justify;
+            font-size: 1.2rem;
+            color: #f48fb1; 
+            font-style: italic;
+            margin-top: 40px;
+            padding: 25px;
+            border-top: 1px solid rgba(244, 143, 177, 0.3);
+            border-bottom: 1px solid rgba(244, 143, 177, 0.3);
+            background: linear-gradient(to right, transparent, rgba(244, 143, 177, 0.05), transparent);
+            line-height: 1.9;
+        }
+
+        /* Hiệu ứng thanh cuộn */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.6); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(244, 143, 177, 0.5); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(244, 143, 177, 0.8); 
+        }
+
+        /* Responsive cho thiết bị di động */
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+                font-size: 1.05rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+            .formula-block {
+                font-size: 1.15rem;
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>VĂN HÓA Á ĐÔNG 06</h1>
+        <h2>Vì Sao Gia Đình Ngày Xưa Bền Vững</h2>
+        
+        <p>Theo nguyên tắc thông thường, gia đình hôn nhân được thành lập từ tình yêu đôi lứa, hai người thương nhau rồi cưới nhau. Nhưng ở xã hội xưa, nhiều hôn nhân do cha mẹ chỉ định, con cái chỉ có vâng lời, không cần tình yêu, chỉ cần bổn phận.</p>
+        
+        <p>Bây giờ ta nói hôn nhân ép buộc là ác, phải để cho trẻ thiết lập hôn nhân gia đình bằng tình yêu thì sẽ là gia đình hạnh phúc. Nhưng bất ngờ, kết quả ngược lại, hôn nhân do trẻ thiết lập từ tình yêu lại rất dễ tan vỡ, tỉ lệ li dị tăng dần. Hôn nhân do chỉ định ép buộc của cha mẹ lại <span class="hl-stable">bền vững hơn</span>. Tại sao vậy?</p>
+        
+        <p>Hôn nhân do tình yêu tuy có vẻ đẹp, nhưng là hôn nhân của bản năng và <span class="hl-emotion">cảm tính</span>, dễ đổi thay theo cảm xúc, dễ bị tác động bởi buồn thương giận ghét liên tục. Còn hôn nhân do chỉ định là hôn nhân của <span class="hl-logic">lý trí</span>, của tinh thần trách nhiệm, của nề nếp gia phong, không lệ thuộc cảm xúc, chỉ cần tuân thủ kỷ cương là được. Tình cảm yêu đương vợ chồng phải giấu phía sau bổn phận quy tắc. Không ngờ đó chính là chân lý.</p>
+        
+        <p>Chân lý là, để có hôn nhân gia đình bền vững thì phải theo công thức như sau:</p>
+        
+        <div class="formula-block">
+            HÔN NHÂN 
+            <span class="math-sign">=</span> TRÁCH NHIỆM 
+            <span class="math-sign">+</span> TUÂN THỦ GIA PHONG 
+            <span class="math-sign">+</span> TÌNH YÊU THƯƠNG
+            <span class="formula-sub">(Lẽ ra nên thêm PHƯỚC nữa)</span>
+        </div>
+        
+        <p><span class="hl-emotion">Tình yêu</span> chỉ là một phần nhỏ, còn lại phần lớn chính là <span class="hl-logic">lý trí</span> để có tinh thần trách nhiệm, lý trí để tuân thủ gia phong.</p>
+        
+        <p>Nơi xã hội xưa, trẻ được dạy sử dụng lý trí rất sớm, biết tuân thủ gia phong, biết có trách nhiệm, nên khi lập gia đình, chúng xử sự theo đúng công thức của trời đất, đúng công thức của tâm lý, đúng công thức của nghiệp duyên. Nhờ vậy mà gia đình bền vững.</p>
+        
+        <p>Bây giờ các cặp yêu nhau chỉ thuần cảm xúc rồi đòi cưới, không ai cản nỗi, và chia tay cũng nhanh.</p>
+        
+        <p>Muốn khắc phục tình trạng hôn nhân chết non, các cặp đôi phải gấp rút thay đổi công thức của hôn nhân theo chuẩn của trời đất là tình cảm phần ít, nâng cao tính lý trí, tinh thần trách nhiệm, tu dưỡng đạo đức, biết làm phước, gia đình có nội quy phải tuân thủ, có thưởng phạt nghiêm minh...</p>
+
+        <div class="romantic-ending">
+            Biết đâu rồi ta lại chứng kiến những cặp đôi sẽ sống với nhau tới già, cùng nhau đi chùa, tu hành, tụng kinh, lễ Phật, ngồi thiền, rồi lại dắt tay nhau ra về khi ánh trăng nghiêng trên trời xa...
+        </div>
+    </div>
+
+</body>
+</html>

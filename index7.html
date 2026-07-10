@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Văn Hóa Á Đông 07 - Hiếu Đạo</title>
+    
+    <!-- Nhúng FontAwesome cho icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Thiết lập nền vũ trụ (Ánh sáng tinh vân rực rỡ ấm áp tượng trưng cho tình mẫu tử/phụ tử thiêng liêng) */
+        body, html {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh vũ trụ tuyệt đẹp từ Unsplash */
+            background-image: url('https://images.unsplash.com/photo-1502481851512-e9e2529bfbf9?q=80&w=2500&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Khung chứa nội dung mờ ảo */
+        .container {
+            background-color: rgba(25, 15, 10, 0.85); /* Nền tối ánh cam/nâu trầm */
+            backdrop-filter: blur(12px); /* Hiệu ứng kính mờ */
+            max-width: 850px;
+            padding: 45px 55px;
+            margin: 40px 20px;
+            border-radius: 18px;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.8;
+            font-size: 1.15rem;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 10px rgba(255, 255, 255, 0.4);
+        }
+
+        h2 {
+            text-align: center;
+            color: #ffca28; /* Vàng ấm áp */
+            font-size: 1.6rem;
+            margin-top: 0;
+            margin-bottom: 35px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Highlight từ khóa */
+        .hl-hieu {
+            color: #ffca28; /* Vàng ấm: Hiếu đạo */
+            font-weight: bold;
+        }
+
+        .hl-nho {
+            color: #81d4fa; /* Xanh lơ nhạt: Nho giáo, Tam Cang */
+            font-weight: bold;
+        }
+
+        /* Khung trích dẫn / Nhấn mạnh */
+        .intro-block {
+            background: linear-gradient(to right, rgba(255, 202, 40, 0.1), rgba(255, 255, 255, 0.02));
+            padding: 20px 25px;
+            border-left: 4px solid #ffca28;
+            border-radius: 0 8px 8px 0;
+            margin: 25px 0;
+            color: #fff8e1;
+            font-style: italic;
+        }
+
+        /* Khung danh sách các việc thực hành Hiếu Đạo */
+        .hieu-dao-list {
+            background-color: rgba(255, 255, 255, 0.03);
+            padding: 25px 30px 25px 35px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 202, 40, 0.3);
+            margin: 25px 0;
+            list-style: none;
+        }
+
+        .hieu-dao-list li {
+            position: relative;
+            margin-bottom: 15px;
+            padding-left: 35px;
+            color: #ffecb3;
+            text-align: justify;
+        }
+
+        .hieu-dao-list li::before {
+            content: "\f4bd"; /* Icon hand-holding-heart của FontAwesome */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: #ffb300;
+            font-size: 1.1rem;
+        }
+
+        .hieu-dao-list li:last-child {
+            margin-bottom: 0;
+        }
+        
+        .conclusion {
+            text-align: center;
+            font-size: 1.25rem;
+            color: #ffca28; 
+            font-weight: bold;
+            margin-top: 35px;
+            padding: 20px;
+            border-top: 1px dashed rgba(255, 202, 40, 0.4);
+            border-bottom: 1px dashed rgba(255, 202, 40, 0.4);
+            line-height: 1.7;
+        }
+
+        /* Hiệu ứng thanh cuộn */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.6); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 202, 40, 0.5); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 202, 40, 0.8); 
+        }
+
+        /* Responsive cho thiết bị di động */
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+                font-size: 1.05rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+            .hieu-dao-list {
+                padding: 20px 20px 20px 25px;
+            }
+            .hieu-dao-list li {
+                padding-left: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>VĂN HÓA Á ĐÔNG 07</h1>
+        <h2>Hiếu Đạo</h2>
+        
+        <p>Mặc dù <span class="hl-hieu">Hiếu đạo</span> đứng ở vị trí thấp trong <span class="hl-nho">Tam Cang</span> (quân - sư - phụ) nhưng lại được dạy dỗ kỹ lưỡng trong Nho giáo. Con cái phải hiếu kính với cha mẹ trước khi có thể làm một người tốt với cuộc đời bên ngoài.</p>
+        
+        <div class="intro-block">
+            Nho giáo xem công ơn sinh thành dưỡng dục của cha mẹ là điều thiêng liêng cao cả. Nếu ai không đủ sức chiêm nghiệm cho đầy đủ công ơn của cha mẹ thì kẻ đó kém đạo đức, không đáng sống xứng đáng giữa cuộc đời.
+        </div>
+        
+        <p>Để có thể bày tỏ Hiếu đạo, thực hành Hiếu đạo, con người phải tuân thủ những điều sau đây:</p>
+        
+        <ul class="hieu-dao-list">
+            <li>Vâng lời cha mẹ, để cha mẹ không nhọc lòng rầy la trách mắng.</li>
+            <li>Dù có ra ngoài học được những điều mới lạ văn minh, nhưng vẫn nhún nhường nhu thuận với cha mẹ chứ không được hỗn xược tranh cãi.</li>
+            <li>Phụ giúp cha mẹ trong việc nhà để cha mẹ yên tâm làm lụng kiếm tiền nuôi sống gia đình.</li>
+            <li>Anh chị em sống hòa thuận để cha mẹ vui lòng.</li>
+            <li>Học giỏi để cha mẹ vui lòng, dù không xuất sắc nhưng cũng phải hoàn thành bổn phận bài vở ở trường.</li>
+            <li>Chăm sóc sức khỏe cho cha mẹ theo khả năng của mình.</li>
+            <li>Thân này do cha mẹ sinh thành vất vả, phải biết giữ gìn toàn vẹn để không uổng phí công lao cha mẹ, đừng hứng chí tham gia các trò chơi mạo hiểm kém an toàn nhỡ đâu tai nạn thì thật là bất hiếu.</li>
+            <li>Cha mẹ có thể chưa hoàn hảo, nhưng không được vì thế mà có thái độ khó chịu hỗn láo.</li>
+            <li>Khi cha mẹ già yếu, việc nuôi dưỡng chăm sóc cha mẹ là một Hiếu đạo cực kì quan trọng.</li>
+            <li>Khi theo đuổi sự nghiệp, nhất là khi có gia đình riêng, người con phải cân nhắc tính toán làm sao để có thể báo hiếu cho cha mẹ chứ không được ích kỷ chỉ biết cá nhân mình.</li>
+            <li>Bây giờ có Phật Pháp, độ cho cha mẹ biết theo Phật tu hành là việc báo hiếu cao quý nhất.</li>
+        </ul>
+        
+        <div class="conclusion">
+            Xã hội phải duy trì Hiếu đạo để giữ giềng mối luân thường đạo lý cho mọi người, nhà trường phải dạy Hiếu đạo cho học sinh, luật pháp phải trừng trị những kẻ bất hiếu.
+        </div>
+    </div>
+
+</body>
+</html>

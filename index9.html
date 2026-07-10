@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Văn Hóa Á Đông 09 - Tu Thân Tề Gia Trị Quốc Bình Thiên Hạ</title>
+    <style>
+        /* Thiết lập nền vũ trụ (Tinh vân rực rỡ, tượng trưng cho sự lan tỏa từ cá nhân đến thiên hạ) */
+        body, html {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh vũ trụ tuyệt đẹp từ Unsplash */
+            background-image: url('https://images.unsplash.com/photo-1537420327992-d6e192287183?q=80&w=2500&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Khung chứa nội dung mờ ảo */
+        .container {
+            background-color: rgba(20, 22, 35, 0.85); /* Nền tối ánh xanh tím */
+            backdrop-filter: blur(12px); /* Hiệu ứng kính mờ */
+            max-width: 850px;
+            padding: 45px 55px;
+            margin: 40px 20px;
+            border-radius: 18px;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.8;
+            font-size: 1.15rem;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 10px rgba(255, 255, 255, 0.4);
+        }
+
+        h2 {
+            text-align: center;
+            color: #ffd54f; /* Vàng kim sáng */
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 35px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            line-height: 1.5;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Highlight từ khóa */
+        .hl-tu-than {
+            color: #ffd54f; /* Vàng kim: Tu Thân (cốt lõi) */
+            font-weight: bold;
+        }
+
+        .hl-te-gia {
+            color: #81d4fa; /* Xanh lơ: Tề Gia */
+            font-weight: bold;
+        }
+        
+        .hl-tri-quoc {
+            color: #aed581; /* Xanh lá nhạt: Trị Quốc Bình Thiên Hạ */
+            font-weight: bold;
+        }
+
+        /* Khung định nghĩa Tề Gia */
+        .definition-block {
+            background: linear-gradient(to right, rgba(129, 212, 250, 0.1), rgba(255, 255, 255, 0.02));
+            padding: 20px 25px;
+            border-left: 4px solid #81d4fa;
+            border-radius: 0 8px 8px 0;
+            margin: 25px 0;
+            color: #e1f5fe;
+            font-style: italic;
+        }
+
+        /* Khung quan hệ gia đình */
+        .family-block {
+            background-color: rgba(255, 255, 255, 0.04);
+            padding: 20px 25px;
+            border-radius: 8px;
+            border: 1px dashed rgba(255, 213, 79, 0.4);
+            margin: 20px 0;
+        }
+        
+        .family-block p {
+            margin-bottom: 10px;
+        }
+        
+        .family-block p:last-child {
+            margin-bottom: 0;
+        }
+
+        .conclusion {
+            text-align: center;
+            font-size: 1.25rem;
+            color: #ffd54f; 
+            font-weight: bold;
+            margin-top: 35px;
+            padding: 20px;
+            border-top: 1px dashed rgba(255, 213, 79, 0.4);
+            border-bottom: 1px dashed rgba(255, 213, 79, 0.4);
+        }
+
+        /* Hiệu ứng thanh cuộn */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.6); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 213, 79, 0.5); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 213, 79, 0.8); 
+        }
+
+        /* Responsive cho thiết bị di động */
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+                font-size: 1.05rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>VĂN HÓA Á ĐÔNG 09</h1>
+        <h2>Tu Thân - Tề Gia<br>Trị Quốc - Bình Thiên Hạ</h2>
+        
+        <p>Ta nghe chữ <span class="hl-tri-quoc">trị quốc bình thiên hạ</span> liền nghĩ là làm chuyện kinh thiên động địa, nhưng không phải vậy, đó chỉ có nghĩa là gây được ảnh hưởng tốt đẹp cho các cộng đồng lớn hơn mà thôi. Mục đích sâu xa của cuộc sống chính là đem được những điều tốt đẹp cho càng nhiều người càng tốt. Con người không được phép sống vì mình, phải có lý tưởng sống vì mọi người.</p>
+        
+        <p>Muốn gieo rắc ảnh hưởng tốt đẹp cho mọi người, ai cũng phải bắt đầu bằng việc <span class="hl-tu-than">TU THÂN</span> trước đã. Tu Thân như thế nào thì lại là cả một hệ thống lý thuyết thực hành kinh điển, rồi thời gian, công sức, gột rửa, chuyển biến, rèn luyện rất vất vả chứ không phải chuyện đùa. Chỉ riêng cái Tu Thân này đã lấy hết của ta một kiếp người chưa đủ.</p>
+        
+        <p>Thế còn <span class="hl-te-gia">TỀ GIA</span>, nếu Tu Thân hết kiếp chưa xong thì thời gian đâu mà Tề Gia nữa?</p>
+        
+        <div class="definition-block">
+            <strong>Tề Gia</strong> có nghĩa là xây dựng một gia đình có đạo đức, có phẩm giá, có nề nếp, có hạnh phúc, có yêu thương, có hiếu thuận, có chung thủy.
+        </div>
+        
+        <div class="family-block">
+            <p>Vợ sẽ kính trọng chồng khi chồng là người mẫu mực đàng hoàng đầy trách nhiệm, đủ sức lo cho vợ con.</p>
+            <p>Con cái sẽ kính trọng cha mẹ khi cha mẹ có bề dày tu dưỡng đạo đức.</p>
+        </div>
+        
+        <p>Thật ra chưa phải đợi <span class="hl-tu-than">Tu Thân</span> hoàn hảo rồi mới <span class="hl-te-gia">Tề Gia</span>, trong khi đang Tu Thân, hiệu quả của Tề Gia đã hiện ra dần dần. Cũng không phải đợi Tề Gia xong rồi mới <span class="hl-tri-quoc">Trị Quốc</span> (cống hiến cho xã hội), trong khi Tề Gia thì việc cống hiến cho xã hội cũng hiện ra dần dần.</p>
+        
+        <p>Tuy nhiên mọi cái ban đầu đều phải là <span class="hl-tu-than">Tu Thân</span> cho đúng đắn, đúng hướng để tâm hồn ta thực sự tốt lên từng ngày. Nho giáo lấy <strong>Tam Cương Ngũ Thường</strong> làm tiêu chuẩn để tu thân (ta nhớ bổ sung thêm <em>Dũng - Nhẫn - Tĩnh - Khiêm</em>), để bậc quân tử điều chỉnh tinh thần và hành vi của mình. Cái gì đúng với Ngũ Thường thì làm, cái gì khác với Ngũ Thường thì bỏ đi, cái gì có trung thành thì giữ, cái gì bạc bẽo thì bỏ đi, cái gì quang minh chính đại thì theo, cái gì mờ ám đen tối thì tránh đi...</p>
+        
+        <p class="conclusion">
+            Trước khi làm gì hay nói gì phải xét xem có đúng đạo lý thánh hiền hay không, sau khi làm xong rồi cũng xét lại có sơ xuất hay không. Nếu sơ xuất phải tìm cách khắc phục chứ không được bỏ qua mà thành tội với trời đất. TU THÂN trong từng ý nghĩ, từng lời nói, từng việc làm, rồi ba điều còn lại tự hiện ra.
+        </p>
+    </div>
+
+</body>
+</html>
