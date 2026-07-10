@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tổng Hợp 25 Bài Văn Hóa Á Đông</title>
+    
+    <!-- Nhúng thư viện icon FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Thiết lập nền bầu trời trong trẻo cho trang */
+        body, html {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh bầu trời trong xanh từ Unsplash */
+            background-image: url('https://images.unsplash.com/photo-1513002749550-c59d786b8e6c?q=80&w=2500&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* Khung chứa tổng thể (Hiệu ứng kính mờ sáng sủa) */
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.75); /* Màu trắng bán trong suốt */
+            backdrop-filter: blur(15px); /* Hiệu ứng kính mờ */
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        h1 {
+            text-align: center;
+            color: #1565c0; /* Màu xanh dương đậm */
+            font-size: 2.6rem;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
+        }
+
+        /* Lưới hiển thị các link */
+        .grid-container {
+            display: grid;
+            /* Tự động chia cột, mỗi cột rộng tối thiểu 130px */
+            grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+            gap: 20px;
+        }
+
+        /* Thiết kế cho từng ô link */
+        .link-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 25px 10px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 2px solid #90caf9; /* Viền xanh dương nhạt */
+            border-radius: 15px;
+            text-decoration: none;
+            color: #1565c0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Hiệu ứng khi di chuột vào ô link */
+        .link-item:hover {
+            transform: translateY(-5px); /* Nổi lên trên */
+            box-shadow: 0 12px 20px rgba(21, 101, 192, 0.2); /* Đổ bóng xanh dương */
+            background: #e3f2fd; /* Nền đổi sang xanh biển rất nhạt */
+            border-color: #42a5f5;
+            color: #0d47a1;
+        }
+
+        /* Thiết kế icon */
+        .link-item i {
+            font-size: 32px;
+            margin-bottom: 15px;
+            color: #42a5f5;
+            transition: all 0.3s ease;
+        }
+
+        .link-item:hover i {
+            color: #1565c0;
+            transform: rotate(180deg); /* Hiệu ứng xoay icon nhẹ khi hover */
+        }
+
+        /* Tên bài */
+        .link-item span {
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+
+        /* Thanh cuộn */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.5); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #90caf9; 
+            border-radius: 6px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #42a5f5; 
+        }
+
+        /* Responsive cho thiết bị di động */
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px;
+                padding: 25px;
+            }
+            h1 {
+                font-size: 1.8rem;
+                margin-bottom: 30px;
+            }
+            .grid-container {
+                grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+                gap: 15px;
+            }
+            .link-item {
+                padding: 20px 10px;
+            }
+            .link-item i {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Văn Hóa Á Đông</h1>
+        
+        <!-- Khung chứa lưới các bài. Các link sẽ được JS đưa vào đây -->
+        <div class="grid-container" id="links-wrapper">
+            <!-- Nội dung được tạo tự động bởi JavaScript bên dưới -->
+        </div>
+    </div>
+
+    <!-- Đoạn mã tự động tạo 25 links -->
+    <script>
+        // Lấy thẻ div chứa lưới
+        const wrapper = document.getElementById('links-wrapper');
+        
+        // Vòng lặp từ 1 đến 25 để tạo HTML cho từng link
+        for (let i = 1; i <= 25; i++) {
+            // Tạo thẻ a
+            const linkTag = document.createElement('a');
+            linkTag.href = `index${i}.html`;
+            linkTag.className = 'link-item';
+            
+            // Gắn icon và text vào thẻ a
+            linkTag.innerHTML = `
+                <i class="fa-solid fa-yin-yang"></i>
+                <span>Bài ${i}</span>
+            `;
+            
+            // Đưa thẻ a vào trong khung chứa
+            wrapper.appendChild(linkTag);
+        }
+    </script>
+
+</body>
+</html>

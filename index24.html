@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Văn Hóa Á Đông 24 - Sống Trung Dung</title>
+    <style>
+        /* Thiết lập nền vũ trụ tĩnh lặng, sâu thẳm */
+        body, html {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh vũ trụ đầy sao từ Unsplash */
+            background-image: url('https://images.unsplash.com/photo-1506703719100-a0f3a48c0f41?q=80&w=2500&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Khung chứa nội dung mờ ảo */
+        .container {
+            background-color: rgba(18, 15, 35, 0.85); /* Nền tối ánh tím xanh */
+            backdrop-filter: blur(12px); /* Hiệu ứng kính mờ */
+            max-width: 850px;
+            padding: 45px 55px;
+            margin: 40px 20px;
+            border-radius: 18px;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.8;
+            font-size: 1.15rem;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 10px rgba(255, 255, 255, 0.4);
+        }
+
+        h2 {
+            text-align: center;
+            color: #90caf9; /* Xanh dương nhạt thanh tao */
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 35px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Highlight từ khóa */
+        .hl-gentleman {
+            color: #ffcc80; /* Màu vàng cam nhạt: Quân tử */
+            font-weight: bold;
+        }
+
+        .hl-middlepath {
+            color: #81c784; /* Xanh lá: Trung dung, trung đạo */
+            font-weight: bold;
+        }
+
+        .hl-wisdom {
+            color: #ce93d8; /* Tím nhạt: Trí tuệ, giác ngộ */
+            font-weight: bold;
+        }
+
+        /* Khung trích dẫn kinh điển */
+        .classic-quote {
+            background: linear-gradient(to right, rgba(144, 202, 249, 0.1), rgba(255, 255, 255, 0.02));
+            padding: 20px 25px;
+            border-left: 4px solid #90caf9;
+            border-radius: 0 8px 8px 0;
+            margin: 25px 0;
+            text-align: center;
+        }
+
+        /* Font chữ Hán */
+        .han-tu {
+            font-family: "KaiTi", "STKaiti", "BiauKai", serif;
+            font-size: 1.8rem;
+            color: #ffd54f; /* Màu vàng kim */
+            margin-bottom: 12px;
+            display: block;
+            letter-spacing: 2px;
+        }
+
+        /* Âm Hán Việt */
+        .han-viet {
+            font-style: italic;
+            color: #b2dfdb; 
+            margin-bottom: 12px;
+            display: block;
+            font-size: 1.1rem;
+        }
+
+        /* Lời dịch */
+        .dich-nghia {
+            font-weight: bold;
+            color: #ffffff;
+            font-size: 1.15rem;
+        }
+        
+        .conclusion {
+            text-align: center;
+            font-size: 1.25rem;
+            color: #ce93d8; 
+            font-weight: bold;
+            margin-top: 35px;
+            padding: 20px;
+            border-top: 1px dashed rgba(206, 147, 216, 0.4);
+            border-bottom: 1px dashed rgba(206, 147, 216, 0.4);
+        }
+
+        /* Hiệu ứng thanh cuộn */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.6); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(144, 202, 249, 0.5); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(144, 202, 249, 0.8); 
+        }
+
+        /* Responsive cho thiết bị di động */
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+                font-size: 1.05rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+            .han-tu {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>VĂN HÓA Á ĐÔNG 24</h1>
+        <h2>Sống Trung Dung</h2>
+        
+        <p>Trong cuốn Luận ngữ – Dương Hóa (陽貨) thiên, chương 1, có câu:</p>
+        
+        <div class="classic-quote">
+            <span class="han-tu">子曰：「君子之道，費而不奢，泰而不驕。」</span>
+            <span class="han-viet">Tử viết: Quân tử chi đạo, phí nhi bất xa, thái nhi bất kiêu.</span>
+            <span class="dich-nghia">Khổng Tử nói: Đạo của người quân tử là có chi dùng mà không xa xỉ, ung dung mà không kiêu ngạo.</span>
+        </div>
+        
+        <p>Sống trên đời, ta vừa tạo ra tài sản và vừa tiêu dùng tài sản. Việc tiêu dùng tài sản là cả một thử thách cho trí tuệ và đạo đức. Ta dùng cho cá nhân ta, cho gia đình ta - phạm vi ích kỷ, rồi dùng để giúp đỡ ra bên ngoài cộng đồng thân quyến, bạn bè, họ hàng, láng giềng, xã hội - phạm vi vị tha.</p>
+        
+        <p>Ta sẽ tiêu dùng theo cảm xúc bồng bột hay biết dự phòng cho tương lai, ta sẽ tiêu dùng cho cạn kiệt hay sẽ tiêu dùng còn có tái tạo...</p>
+        
+        <p>Việc tiêu dùng đòi hỏi bản lĩnh rất lớn. <span class="hl-gentleman">Bậc quân tử</span> chính là người biết tiêu dùng tài sản một cách thông minh hợp lý, vừa tiết kiệm vừa rộng lượng. Đó là tiêu dùng của đạo lý <span class="hl-middlepath">trung dung</span>.</p>
+        
+        <p>Vì có đạo lý, có lập trường nên <span class="hl-gentleman">bậc quân tử</span> không có gì phải lo sợ, sống ung dung theo mệnh trời, nhưng không có nghĩa là bất cần kiêu ngạo. Ung dung thư thái với chính mình mà vẫn khiêm cung lễ phép với mọi người. Đó là <span class="hl-middlepath">trung đạo</span>.</p>
+        
+        <p>Vừa cư xử như thế này, vừa cũng phải cư xử như thế kia, rất khó xử lý, nhưng đó là lẽ phải. Còn nếu ta rơi một bên thì dễ hiểu nhưng sẽ phạm sai lầm. Chân lý lúc nào cũng khó hiểu, khó nắm bắt, khó thực hành, phải có <span class="hl-wisdom">trí tuệ</span> mới giác ngộ được.</p>
+
+        <p class="conclusion">
+            Giác ngộ được rồi thì yên tâm mà tu dưỡng.
+        </p>
+    </div>
+
+</body>
+</html>

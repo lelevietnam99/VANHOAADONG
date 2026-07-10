@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Văn Hóa Á Đông 23 - Nghĩa Khí</title>
+    
+    <!-- Nhúng FontAwesome cho các icon (nếu cần) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Thiết lập nền vũ trụ (Tinh vân đỏ tía thể hiện sự mạnh mẽ, nghĩa khí) */
+        body, html {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh tinh vân rực rỡ từ Unsplash */
+            background-image: url('https://images.unsplash.com/photo-1462332420958-a05d1e002413?q=80&w=2500&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Khung chứa nội dung mờ ảo */
+        .container {
+            background-color: rgba(25, 10, 15, 0.85); /* Nền tối ánh đỏ mận */
+            backdrop-filter: blur(12px); /* Hiệu ứng kính mờ */
+            max-width: 850px;
+            padding: 45px 55px;
+            margin: 40px 20px;
+            border-radius: 18px;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.8;
+            font-size: 1.15rem;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 10px rgba(255, 255, 255, 0.4);
+        }
+
+        h2 {
+            text-align: center;
+            color: #ff8a65; /* Cam đỏ mạnh mẽ */
+            font-size: 1.6rem;
+            margin-top: 0;
+            margin-bottom: 35px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Highlight từ khóa */
+        .hl-nghiakhi {
+            color: #ff8a65; /* Cam đỏ: Nghĩa khí */
+            font-weight: bold;
+        }
+
+        .hl-phuoc {
+            color: #ffd54f; /* Vàng: Phước, cao minh */
+            font-weight: bold;
+        }
+
+        /* Khung danh sách đức tính */
+        .list-qualities {
+            background: linear-gradient(to right, rgba(255, 138, 101, 0.1), rgba(255, 255, 255, 0.02));
+            padding: 20px 25px 20px 45px;
+            border-left: 4px solid #ff8a65;
+            border-radius: 0 8px 8px 0;
+            margin: 25px 0;
+            list-style-type: none;
+        }
+
+        .list-qualities li {
+            position: relative;
+            margin-bottom: 8px;
+            color: #ffe0b2;
+        }
+
+        .list-qualities li::before {
+            content: "\f058"; /* Icon check-circle của FontAwesome */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: -25px;
+            color: #ff8a65;
+        }
+
+        .list-qualities li:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Khung điệp ngữ "Sống mà..." */
+        .rhetorical-block {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 20px 25px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 138, 101, 0.3);
+            margin: 25px 0;
+            font-style: italic;
+            color: #e0e0e0;
+        }
+
+        /* Trích dẫn Nguyễn Công Trứ */
+        .quote-block {
+            text-align: center;
+            margin: 35px 0;
+            padding: 20px;
+            font-size: 1.4rem;
+            color: #ffd54f;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            letter-spacing: 1px;
+        }
+
+        .quote-author {
+            display: block;
+            font-size: 1.1rem;
+            color: #ffb74d;
+            margin-top: 10px;
+            font-style: italic;
+            font-family: 'Segoe UI', sans-serif;
+            font-weight: normal;
+        }
+        
+        .conclusion {
+            text-align: center;
+            font-size: 1.25rem;
+            color: #ffcc80; 
+            font-weight: bold;
+            margin-top: 35px;
+            padding: 20px;
+            border-top: 1px dashed rgba(255, 138, 101, 0.4);
+            border-bottom: 1px dashed rgba(255, 138, 101, 0.4);
+        }
+
+        /* Hiệu ứng thanh cuộn */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.6); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 138, 101, 0.5); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 138, 101, 0.8); 
+        }
+
+        /* Responsive cho thiết bị di động */
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+                font-size: 1.05rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+            .quote-block {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>VĂN HÓA Á ĐÔNG 23</h1>
+        <h2>Nghĩa Khí</h2>
+        
+        <p><span class="hl-nghiakhi">Nghĩa khí</span> là một từ có ý nghĩa bao gồm nhiều phạm trù khác nhau như:</p>
+        
+        <ul class="list-qualities">
+            <li>Ngay thẳng</li>
+            <li>Trung thành</li>
+            <li>Giữ lời hứa</li>
+            <li>Không nói điều lừa bịp</li>
+            <li>Không dùng thủ đoạn hèn hạ</li>
+            <li>Nhớ ơn và đền ơn</li>
+            <li>Có trách nhiệm với người dưới</li>
+            <li>Vâng lời người trên</li>
+        </ul>
+        
+        <p>Từ lâu ta hay nghe câu "<span class="hl-nghiakhi">Nghĩa khí giang hồ</span>" nghĩa là người trong giang hồ (dân sống ngoài vòng pháp luật đời xưa) rất có Nghĩa khí. Họ không tuân thủ pháp luật của triều đình nhưng lại lấy Nghĩa khí làm lẽ sống, nhờ vậy mà vẫn có người chịu đi theo. Ngày nay thì không còn giang hồ kiểu đó nữa, chỉ có bọn xã hội đen thủ đoạn lừa đảo tàn ác mà thôi.</p>
+        
+        <p>Khái niệm về <span class="hl-nghiakhi">Nghĩa khí</span> đó (nhớ bỏ chữ giang hồ ra nha) đáng cho mọi người suy gẫm áp dụng. Quả thật, sống trên đời mà thiếu Nghĩa khí thì sống hèn làm gì.</p>
+
+        <div class="rhetorical-block">
+            Sống mà vô trách nhiệm với người của mình thì sống làm gì.<br>
+            Sống mà phản bội cầu vinh thì sống làm gì.<br>
+            Sống mà vong ân bội nghĩa thì sống làm gì.<br>
+            Sống mà không giữ lời hứa thì sống làm gì.<br>
+            Sống mà lén lút mưu mô thủ đoạn hại người thì sống làm gì.<br>
+            Sống mà không tìm được bậc cao minh để tôn thờ thì sống làm gì.<br>
+            Sống mà hèn nhát không dám xông pha nguy hiểm để giúp đời thì sống làm gì.<br>
+            Sống mà không trung hiếu thì sống làm gì...
+        </div>
+        
+        <div class="quote-block">
+            "Có trung hiếu nên đứng trong trời đất..."
+            <span class="quote-author">- Nguyễn Công Trứ -</span>
+        </div>
+        
+        <p>Lối sống nhân ái, vị tha, có trách nhiệm, có trung hiếu khiến cho người quân tử <span class="hl-phuoc">có phước</span>. Nói chung, có <span class="hl-nghiakhi">Nghĩa khí</span> sẽ có phước.</p>
+        
+        <p class="conclusion">
+            Sống không hổ thẹn với mọi người, sau này chết không hổ thẹn với thần thánh, là được rồi.
+        </p>
+    </div>
+
+</body>
+</html>

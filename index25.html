@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Văn Hóa Á Đông 25 - Thương Cho Roi Cho Vọt</title>
+    <style>
+        /* Thiết lập nền vũ trụ bao la */
+        body, html {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh vũ trụ tuyệt đẹp từ Unsplash */
+            background-image: url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=2500&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Khung chứa nội dung mờ ảo */
+        .container {
+            background-color: rgba(15, 10, 30, 0.85); /* Nền tối ánh tím nhẹ */
+            backdrop-filter: blur(12px); /* Hiệu ứng kính mờ */
+            max-width: 850px;
+            padding: 45px 55px;
+            margin: 40px 20px;
+            border-radius: 18px;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.8;
+            font-size: 1.15rem;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 10px rgba(255, 255, 255, 0.4);
+        }
+
+        h2 {
+            text-align: center;
+            color: #b39ddb; /* Tím nhạt cho đồng bộ với nền */
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 35px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Highlight từ khóa */
+        .hl-east {
+            color: #aed581; /* Xanh lá mạ */
+            font-weight: bold;
+        }
+
+        .hl-west {
+            color: #ffb74d; /* Cam nhạt */
+            font-weight: bold;
+        }
+
+        /* Khung trích dẫn kinh điển */
+        .classic-quote {
+            background: linear-gradient(to right, rgba(179, 157, 219, 0.1), rgba(255, 255, 255, 0.02));
+            padding: 20px 25px;
+            border-left: 4px solid #b39ddb;
+            border-radius: 0 8px 8px 0;
+            margin: 25px 0;
+            text-align: center;
+        }
+
+        /* Font chữ Hán */
+        .han-tu {
+            font-family: "KaiTi", "STKaiti", "BiauKai", serif;
+            font-size: 1.8rem;
+            color: #ffd54f; /* Màu vàng kim */
+            margin-bottom: 10px;
+            display: block;
+            letter-spacing: 2px;
+        }
+
+        /* Âm Hán Việt */
+        .han-viet {
+            font-style: italic;
+            color: #90caf9; /* Xanh dương sáng */
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        /* Lời dịch */
+        .dich-nghia {
+            font-weight: bold;
+            color: #ffffff;
+        }
+        
+        .conclusion {
+            text-align: center;
+            font-size: 1.25rem;
+            color: #ce93d8; 
+            font-weight: bold;
+            margin-top: 35px;
+            padding: 20px;
+            border-top: 1px dashed rgba(206, 147, 216, 0.4);
+            border-bottom: 1px dashed rgba(206, 147, 216, 0.4);
+        }
+
+        /* Hiệu ứng thanh cuộn */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.6); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(179, 157, 219, 0.5); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(179, 157, 219, 0.8); 
+        }
+
+        /* Responsive cho thiết bị di động */
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+                font-size: 1.05rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+            .han-tu {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>VĂN HÓA Á ĐÔNG 25</h1>
+        <h2>Thương Cho Roi Cho Vọt</h2>
+        
+        <p>Trong thiên Lễ Ký – Học ký (禮記・學記) có câu:</p>
+        
+        <div class="classic-quote">
+            <span class="han-tu">故愛而不教，所傷亦深矣；<br>嚴而不教，所失亦甚矣。</span>
+            <span class="han-viet">"Cố ái nhi bất giáo, sở thương diệc thâm hỹ; nghiêm nhi bất giáo, sở thất diệc thậm hỹ."</span>
+            <span class="dich-nghia">Yêu mà không dạy, cái hại cũng sâu; nghiêm mà không dạy, cái mất cũng lớn.</span>
+        </div>
+        
+        <p>Câu này rất gần với tư tưởng "thương cho roi cho vọt" của người Việt Nam, cho thấy rằng tình yêu đúng nghĩa phải có sự giáo dục, và sự nghiêm khắc cũng phải có lý lẽ, không chỉ là trừng phạt.</p>
+        
+        <p>Chữ Nho có câu “Giáo bất nghiêm, sư chi quá”:</p>
+
+        <div class="classic-quote">
+            <span class="han-tu">教不嚴，師之過</span>
+            <span class="dich-nghia">Dạy dỗ mà không nghiêm khắc, để cho học trò phạm sai lầm, đó chính là lỗi của thầy.</span>
+        </div>
+        
+        <p><span class="hl-east">Văn hóa Á Đông</span> đòi hỏi cha mẹ thầy cô có thương con em của mình cũng phải nén lại, không nói ra nhiều, không phải mỗi ngày "I love you, son". Bày tỏ tình thương quá đáng, vượt mức cho phép, đứa trẻ sẽ lập tức hư hỏng vì trong não nó hình thành một khái niệm cha mẹ có trách nhiệm phải chìu ý nó vô điều kiện, nó muốn gì phải được nấy.</p>
+        
+        <p>Còn văn hóa Á Đông thưởng phạt phân minh, buộc đứa trẻ phải nhìn lại mình đã hành xử tốt chưa để xứng đáng với tình yêu thương đó. Tình yêu thương được bày tỏ theo cách có điều kiện dù rằng lòng cha mẹ thương con vô điều kiện.</p>
+        
+        <p>Bên <span class="hl-west">tây</span> có mục khen thưởng danh hiệu "good parents" nghĩa là cha mẹ chìu con hết mức, mà không đề cao danh hiệu "good children" con ngoan, để buộc trẻ phải phấn đấu. Thế là mấy đứa trẻ biết bố mẹ cố gắng chìu nó để đạt danh hiệu good parents, nó lại càng ngang bướng lì lợm hỗn xược, mất dạy.</p>
+        
+        <p><span class="hl-east">Á Đông</span> thì đề cao danh hiệu con ngoan trò giỏi để buộc trẻ phải phấn đấu.</p>
+        
+        <p>Bây giờ người ta cho rằng roi vọt với trẻ là ác. Chẳng biết có ác không nhưng vô số anh hùng dựng xây đất nước này đều lớn lên trong nền giáo dục roi vọt đó. Trẻ không có nhận thức đúng sai, chỉ biết đau hay không đau. Cái gì đau thì lần sau không được làm nữa, vậy thôi. Đơn giản vậy mà định hình cho trẻ biết đúng hay sai.</p>
+        
+        <p class="conclusion">
+            Thương cho roi cho vọt, đó là trí tuệ sâu sắc của người Việt Nam, tạo nên bản sắc anh hùng của dân tộc Việt Nam.
+        </p>
+    </div>
+
+</body>
+</html>
